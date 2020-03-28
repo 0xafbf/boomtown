@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/road_crossing_center_mesh.obj-1955412fc2fa81e7c55f276848f07f0e.mesh"
+
+[deps]
+
+files=[ "res://.import/road_crossing_center_mesh.obj-1955412fc2fa81e7c55f276848f07f0e.mesh" ]
+
+source_file="res://Models/road_crossing_center_mesh.obj"
+dest_files=[ "res://.import/road_crossing_center_mesh.obj-1955412fc2fa81e7c55f276848f07f0e.mesh", "res://.import/road_crossing_center_mesh.obj-1955412fc2fa81e7c55f276848f07f0e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

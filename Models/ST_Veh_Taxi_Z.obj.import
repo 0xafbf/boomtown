@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/ST_Veh_Taxi_Z.obj-ce1ddd2fe4da55ba7c0cc03e5a7756fc.mesh"
+
+[deps]
+
+files=[ "res://.import/ST_Veh_Taxi_Z.obj-ce1ddd2fe4da55ba7c0cc03e5a7756fc.mesh" ]
+
+source_file="res://Models/ST_Veh_Taxi_Z.obj"
+dest_files=[ "res://.import/ST_Veh_Taxi_Z.obj-ce1ddd2fe4da55ba7c0cc03e5a7756fc.mesh", "res://.import/ST_Veh_Taxi_Z.obj-ce1ddd2fe4da55ba7c0cc03e5a7756fc.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

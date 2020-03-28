@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Materials/SimpleTownGeneral.tres" type="Material" id=1]
+[ext_resource path="res://Models/Building_House_01.obj" type="ArrayMesh" id=2]
+
+[node name="Building_House_01" type="MeshInstance"]
+transform = Transform( -0.000110173, 6.20627e-05, -0.3, 8.40904e-05, 0.3, 6.20339e-05, 0.3, -8.40692e-05, -0.00011019, 0, 0, 0 )
+mesh = ExtResource( 2 )
+material/0 = ExtResource( 1 )

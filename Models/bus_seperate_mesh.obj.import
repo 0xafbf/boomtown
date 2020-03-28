@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/bus_seperate_mesh.obj-89ed0474b52052ee814b3710e21c139a.mesh"
+
+[deps]
+
+files=[ "res://.import/bus_seperate_mesh.obj-89ed0474b52052ee814b3710e21c139a.mesh" ]
+
+source_file="res://Models/bus_seperate_mesh.obj"
+dest_files=[ "res://.import/bus_seperate_mesh.obj-89ed0474b52052ee814b3710e21c139a.mesh", "res://.import/bus_seperate_mesh.obj-89ed0474b52052ee814b3710e21c139a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

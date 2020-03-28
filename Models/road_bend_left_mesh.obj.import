@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/road_bend_left_mesh.obj-8918f44c785f18fcff9c47c672225ac3.mesh"
+
+[deps]
+
+files=[ "res://.import/road_bend_left_mesh.obj-8918f44c785f18fcff9c47c672225ac3.mesh" ]
+
+source_file="res://Models/road_bend_left_mesh.obj"
+dest_files=[ "res://.import/road_bend_left_mesh.obj-8918f44c785f18fcff9c47c672225ac3.mesh", "res://.import/road_bend_left_mesh.obj-8918f44c785f18fcff9c47c672225ac3.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

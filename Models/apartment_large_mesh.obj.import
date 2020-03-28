@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/apartment_large_mesh.obj-1737dcbe536b4354499f97ee27c079ea.mesh"
+
+[deps]
+
+files=[ "res://.import/apartment_large_mesh.obj-1737dcbe536b4354499f97ee27c079ea.mesh" ]
+
+source_file="res://Models/apartment_large_mesh.obj"
+dest_files=[ "res://.import/apartment_large_mesh.obj-1737dcbe536b4354499f97ee27c079ea.mesh", "res://.import/apartment_large_mesh.obj-1737dcbe536b4354499f97ee27c079ea.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

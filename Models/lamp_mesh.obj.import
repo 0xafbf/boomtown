@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/lamp_mesh.obj-41f56e50b18860a10b91ac3bfc527afc.mesh"
+
+[deps]
+
+files=[ "res://.import/lamp_mesh.obj-41f56e50b18860a10b91ac3bfc527afc.mesh" ]
+
+source_file="res://Models/lamp_mesh.obj"
+dest_files=[ "res://.import/lamp_mesh.obj-41f56e50b18860a10b91ac3bfc527afc.mesh", "res://.import/lamp_mesh.obj-41f56e50b18860a10b91ac3bfc527afc.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Building_StripClub.obj-24db28fc2dfa577bca45286604036dab.mesh"
+
+[deps]
+
+files=[ "res://.import/Building_StripClub.obj-24db28fc2dfa577bca45286604036dab.mesh" ]
+
+source_file="res://Models/Building_StripClub.obj"
+dest_files=[ "res://.import/Building_StripClub.obj-24db28fc2dfa577bca45286604036dab.mesh", "res://.import/Building_StripClub.obj-24db28fc2dfa577bca45286604036dab.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

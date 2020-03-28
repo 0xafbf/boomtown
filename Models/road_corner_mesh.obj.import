@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/road_corner_mesh.obj-526813b01f3e452ea648ec7de7d9919e.mesh"
+
+[deps]
+
+files=[ "res://.import/road_corner_mesh.obj-526813b01f3e452ea648ec7de7d9919e.mesh" ]
+
+source_file="res://Models/road_corner_mesh.obj"
+dest_files=[ "res://.import/road_corner_mesh.obj-526813b01f3e452ea648ec7de7d9919e.mesh", "res://.import/road_corner_mesh.obj-526813b01f3e452ea648ec7de7d9919e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

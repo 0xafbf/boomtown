@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Building_CoffeeShop.obj-3f02fffb6393a998dfde226c1e6db46d.mesh"
+
+[deps]
+
+files=[ "res://.import/Building_CoffeeShop.obj-3f02fffb6393a998dfde226c1e6db46d.mesh" ]
+
+source_file="res://Models/Building_CoffeeShop.obj"
+dest_files=[ "res://.import/Building_CoffeeShop.obj-3f02fffb6393a998dfde226c1e6db46d.mesh", "res://.import/Building_CoffeeShop.obj-3f02fffb6393a998dfde226c1e6db46d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

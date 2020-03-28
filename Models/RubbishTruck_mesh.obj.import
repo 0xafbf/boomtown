@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/RubbishTruck_mesh.obj-4d3d4457d051bb7858347bb60c7a5e6d.mesh"
+
+[deps]
+
+files=[ "res://.import/RubbishTruck_mesh.obj-4d3d4457d051bb7858347bb60c7a5e6d.mesh" ]
+
+source_file="res://Models/RubbishTruck_mesh.obj"
+dest_files=[ "res://.import/RubbishTruck_mesh.obj-4d3d4457d051bb7858347bb60c7a5e6d.mesh", "res://.import/RubbishTruck_mesh.obj-4d3d4457d051bb7858347bb60c7a5e6d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

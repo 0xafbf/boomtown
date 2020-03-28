@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/ST_Veh_Bus_Brown_Z.obj-db26655274f6c000eca9e75082809f88.mesh"
+
+[deps]
+
+files=[ "res://.import/ST_Veh_Bus_Brown_Z.obj-db26655274f6c000eca9e75082809f88.mesh" ]
+
+source_file="res://Models/ST_Veh_Bus_Brown_Z.obj"
+dest_files=[ "res://.import/ST_Veh_Bus_Brown_Z.obj-db26655274f6c000eca9e75082809f88.mesh", "res://.import/ST_Veh_Bus_Brown_Z.obj-db26655274f6c000eca9e75082809f88.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

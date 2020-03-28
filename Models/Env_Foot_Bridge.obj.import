@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Env_Foot_Bridge.obj-94c7faea397d34b338f78a7cfba16b0d.mesh"
+
+[deps]
+
+files=[ "res://.import/Env_Foot_Bridge.obj-94c7faea397d34b338f78a7cfba16b0d.mesh" ]
+
+source_file="res://Models/Env_Foot_Bridge.obj"
+dest_files=[ "res://.import/Env_Foot_Bridge.obj-94c7faea397d34b338f78a7cfba16b0d.mesh", "res://.import/Env_Foot_Bridge.obj-94c7faea397d34b338f78a7cfba16b0d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

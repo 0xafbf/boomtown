@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Env_Canal_Corner_02.obj-65be1de5c8d96e6e6c12f3fc548baf1e.mesh"
+
+[deps]
+
+files=[ "res://.import/Env_Canal_Corner_02.obj-65be1de5c8d96e6e6c12f3fc548baf1e.mesh" ]
+
+source_file="res://Models/Env_Canal_Corner_02.obj"
+dest_files=[ "res://.import/Env_Canal_Corner_02.obj-65be1de5c8d96e6e6c12f3fc548baf1e.mesh", "res://.import/Env_Canal_Corner_02.obj-65be1de5c8d96e6e6c12f3fc548baf1e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

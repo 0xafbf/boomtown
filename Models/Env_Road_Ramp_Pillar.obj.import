@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Env_Road_Ramp_Pillar.obj-24eed8d0d362718fe21c4dade7a16f18.mesh"
+
+[deps]
+
+files=[ "res://.import/Env_Road_Ramp_Pillar.obj-24eed8d0d362718fe21c4dade7a16f18.mesh" ]
+
+source_file="res://Models/Env_Road_Ramp_Pillar.obj"
+dest_files=[ "res://.import/Env_Road_Ramp_Pillar.obj-24eed8d0d362718fe21c4dade7a16f18.mesh", "res://.import/Env_Road_Ramp_Pillar.obj-24eed8d0d362718fe21c4dade7a16f18.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

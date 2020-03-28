@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Models/apartment_large_mesh.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Materials/Building01B.tres" type="Material" id=2]
+
+[node name="apartment_large_mesh" type="MeshInstance"]
+transform = Transform( -1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, 0, 0, 0 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 2 )

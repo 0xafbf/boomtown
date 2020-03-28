@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Building_BarberShop.obj-fe194fa96b8b6d394992d9ecd167db1a.mesh"
+
+[deps]
+
+files=[ "res://.import/Building_BarberShop.obj-fe194fa96b8b6d394992d9ecd167db1a.mesh" ]
+
+source_file="res://Models/Building_BarberShop.obj"
+dest_files=[ "res://.import/Building_BarberShop.obj-fe194fa96b8b6d394992d9ecd167db1a.mesh", "res://.import/Building_BarberShop.obj-fe194fa96b8b6d394992d9ecd167db1a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

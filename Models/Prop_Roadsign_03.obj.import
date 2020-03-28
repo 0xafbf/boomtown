@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Prop_Roadsign_03.obj-9236d1b07285fef70404ed6bc3ad9ded.mesh"
+
+[deps]
+
+files=[ "res://.import/Prop_Roadsign_03.obj-9236d1b07285fef70404ed6bc3ad9ded.mesh" ]
+
+source_file="res://Models/Prop_Roadsign_03.obj"
+dest_files=[ "res://.import/Prop_Roadsign_03.obj-9236d1b07285fef70404ed6bc3ad9ded.mesh", "res://.import/Prop_Roadsign_03.obj-9236d1b07285fef70404ed6bc3ad9ded.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

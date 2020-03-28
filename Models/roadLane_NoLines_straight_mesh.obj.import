@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/roadLane_NoLines_straight_mesh.obj-8fc87695b8b3f463d85515e8f4b72762.mesh"
+
+[deps]
+
+files=[ "res://.import/roadLane_NoLines_straight_mesh.obj-8fc87695b8b3f463d85515e8f4b72762.mesh" ]
+
+source_file="res://Models/roadLane_NoLines_straight_mesh.obj"
+dest_files=[ "res://.import/roadLane_NoLines_straight_mesh.obj-8fc87695b8b3f463d85515e8f4b72762.mesh", "res://.import/roadLane_NoLines_straight_mesh.obj-8fc87695b8b3f463d85515e8f4b72762.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/fence_short_spike.obj-9614566debf9315f705adcc41e87920d.mesh"
+
+[deps]
+
+files=[ "res://.import/fence_short_spike.obj-9614566debf9315f705adcc41e87920d.mesh" ]
+
+source_file="res://Models/fence_short_spike.obj"
+dest_files=[ "res://.import/fence_short_spike.obj-9614566debf9315f705adcc41e87920d.mesh", "res://.import/fence_short_spike.obj-9614566debf9315f705adcc41e87920d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

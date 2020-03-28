@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Env_Road_Ramp_Straight.obj-4601bf4bf3ad479d22df29669b459d72.mesh"
+
+[deps]
+
+files=[ "res://.import/Env_Road_Ramp_Straight.obj-4601bf4bf3ad479d22df29669b459d72.mesh" ]
+
+source_file="res://Models/Env_Road_Ramp_Straight.obj"
+dest_files=[ "res://.import/Env_Road_Ramp_Straight.obj-4601bf4bf3ad479d22df29669b459d72.mesh", "res://.import/Env_Road_Ramp_Straight.obj-4601bf4bf3ad479d22df29669b459d72.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

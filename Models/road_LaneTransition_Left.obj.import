@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/road_LaneTransition_Left.obj-1251655cf77e36b6dee9f4202bd9d8c7.mesh"
+
+[deps]
+
+files=[ "res://.import/road_LaneTransition_Left.obj-1251655cf77e36b6dee9f4202bd9d8c7.mesh" ]
+
+source_file="res://Models/road_LaneTransition_Left.obj"
+dest_files=[ "res://.import/road_LaneTransition_Left.obj-1251655cf77e36b6dee9f4202bd9d8c7.mesh", "res://.import/road_LaneTransition_Left.obj-1251655cf77e36b6dee9f4202bd9d8c7.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

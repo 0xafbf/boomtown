@@ -1,0 +1,172 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Models/grass_square_mesh.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Models/Env_Beach_Straight.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://Models/road_bend_left_mesh.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://Prefabs/Prop_Tree_01.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/Prop_Tree_02.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/Env_Beach_Straight.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/Env_Beach_Corner.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Materials/SimpleTownGeneral.tres" type="Material" id=9]
+[ext_resource path="res://Materials/road.tres" type="Material" id=10]
+[ext_resource path="res://Materials/NatureTrees.tres" type="Material" id=11]
+[ext_resource path="res://Materials/road2.tres" type="Material" id=12]
+[ext_resource path="res://Models/grave_medium_mesh.obj" type="ArrayMesh" id=13]
+[ext_resource path="res://Models/road_corner_mesh.obj" type="ArrayMesh" id=14]
+[ext_resource path="res://Models/path_cross_mesh.obj" type="ArrayMesh" id=15]
+[ext_resource path="res://Textures/Road.png" type="Texture" id=16]
+[ext_resource path="res://Models/roadLane_NoLines_straight_mesh.obj" type="ArrayMesh" id=17]
+[ext_resource path="res://Models/grave_large_mesh.obj" type="ArrayMesh" id=18]
+[ext_resource path="res://Models/hedge_mesh.obj" type="ArrayMesh" id=19]
+[ext_resource path="res://Models/road_CornerLines_mesh1.obj" type="ArrayMesh" id=20]
+[ext_resource path="res://Models/road_bend_right_mesh.obj" type="ArrayMesh" id=21]
+[ext_resource path="res://Models/grave_small_mesh.obj" type="ArrayMesh" id=22]
+[ext_resource path="res://Models/roadLane_straight_mesh1.obj" type="ArrayMesh" id=23]
+[ext_resource path="res://Models/path_driveway.obj" type="ArrayMesh" id=24]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 16 )
+
+[node name="AlejoTesting" type="Spatial"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0 )
+
+[node name="Env_Beach_Straight" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 0 )
+
+[node name="Env_Beach_Straight6" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 0 )
+
+[node name="Env_Beach_Straight14" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, 0 )
+
+[node name="Env_Beach_Straight12" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, -1, -20, 0, 80 )
+
+[node name="Env_Beach_Straight11" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, -1, -40, 0, 80 )
+
+[node name="Env_Beach_Straight13" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, -1, -60, 0, 80 )
+
+[node name="Env_Beach_Straight2" type="MeshInstance" parent="."]
+transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 3.97364e-06, 0, -1.58946e-06 )
+mesh = ExtResource( 3 )
+material/0 = ExtResource( 9 )
+
+[node name="Env_Beach_Straight3" type="MeshInstance" parent="."]
+transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 3.97364e-06, 0, 20 )
+mesh = ExtResource( 3 )
+material/0 = ExtResource( 9 )
+
+[node name="Env_Beach_Straight4" type="MeshInstance" parent="."]
+transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 3.97364e-06, 0, 40 )
+mesh = ExtResource( 3 )
+material/0 = ExtResource( 9 )
+
+[node name="Env_Beach_Straight5" type="MeshInstance" parent="."]
+transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 3.97364e-06, 0, 60 )
+mesh = ExtResource( 3 )
+material/0 = ExtResource( 9 )
+
+[node name="Env_Beach_Straight10" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, 1, 0, 4.37114e-08, -60, 0, -1.58946e-06 )
+mesh = ExtResource( 3 )
+material/0 = ExtResource( 9 )
+
+[node name="Env_Beach_Straight9" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, 1, 0, 4.37114e-08, -60, 0, 20 )
+mesh = ExtResource( 3 )
+material/0 = ExtResource( 9 )
+
+[node name="Env_Beach_Straight8" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, 1, 0, 4.37114e-08, -60, 0, 40 )
+mesh = ExtResource( 3 )
+material/0 = ExtResource( 9 )
+
+[node name="Env_Beach_Straight7" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, 1, 0, 4.37114e-08, -60, 0, 60 )
+mesh = ExtResource( 3 )
+material/0 = ExtResource( 9 )
+
+[node name="Env_Beach_Corner" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="Env_Beach_Corner2" parent="." instance=ExtResource( 8 )]
+transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, 0 )
+
+[node name="Env_Beach_Corner4" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 80 )
+
+[node name="Env_Beach_Corner3" parent="." instance=ExtResource( 8 )]
+transform = Transform( -1, 0, 0, 0, 1, 8.74228e-08, 0, 8.74228e-08, -1, -60, 0, 80 )
+
+[node name="grass_square_mesh" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3333, 0, 63.3333 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 11 )
+
+[node name="grave_large_mesh" type="MeshInstance" parent="grass_square_mesh"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3333, 3.33333, 6.66666 )
+mesh = ExtResource( 18 )
+material/0 = null
+
+[node name="grave_medium_mesh" type="MeshInstance" parent="grass_square_mesh"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3333, 0, 10 )
+mesh = ExtResource( 13 )
+material/0 = null
+
+[node name="grave_small_mesh" type="MeshInstance" parent="grass_square_mesh"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3333, 0, 10 )
+mesh = ExtResource( 22 )
+material/0 = null
+
+[node name="hedge_mesh" type="MeshInstance" parent="grass_square_mesh"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3333, 0, 6.66666 )
+mesh = ExtResource( 19 )
+material/0 = ExtResource( 11 )
+
+[node name="path_cross_mesh" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6663, 0, 10 )
+mesh = ExtResource( 15 )
+material/0 = SubResource( 1 )
+
+[node name="path_driveway" type="MeshInstance" parent="path_cross_mesh"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.9997, 6.66667, 6.66667 )
+mesh = ExtResource( 24 )
+material/0 = ExtResource( 10 )
+
+[node name="Prop_Tree_01" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3333, 0, -3.33333 )
+
+[node name="Prop_Tree_02" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.6667, 0, -3.33333 )
+
+[node name="roadLane_NoLines_straight_mesh" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 56.6667 )
+mesh = ExtResource( 17 )
+material/0 = ExtResource( 12 )
+
+[node name="roadLane_straight_mesh1" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6667, -3.33333, 56.6667 )
+mesh = ExtResource( 23 )
+material/0 = ExtResource( 12 )
+
+[node name="road_bend_left_mesh" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6667, -3.33333, 43.3333 )
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="road_bend_right_mesh" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, -3.33333, 43.3333 )
+mesh = ExtResource( 21 )
+material/0 = null
+
+[node name="road_CornerLines_mesh1" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -53.3333, -3.33333, 40 )
+mesh = ExtResource( 20 )
+material/0 = null
+
+[node name="road_corner_mesh" type="MeshInstance" parent="road_CornerLines_mesh1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.6667, -3.33333, -13.3333 )
+mesh = ExtResource( 14 )
+material/0 = null

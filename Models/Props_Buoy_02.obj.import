@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Props_Buoy_02.obj-280b3160dca055f1c7221f7c50c64cb4.mesh"
+
+[deps]
+
+files=[ "res://.import/Props_Buoy_02.obj-280b3160dca055f1c7221f7c50c64cb4.mesh" ]
+
+source_file="res://Models/Props_Buoy_02.obj"
+dest_files=[ "res://.import/Props_Buoy_02.obj-280b3160dca055f1c7221f7c50c64cb4.mesh", "res://.import/Props_Buoy_02.obj-280b3160dca055f1c7221f7c50c64cb4.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
