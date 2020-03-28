@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Materials/NatureTrees.tres" type="Material" id=1]
+[ext_resource path="res://Models/hedge_mesh.obj" type="ArrayMesh" id=2]
+
+[node name="hedge_mesh" type="MeshInstance"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+mesh = ExtResource( 2 )
+material/0 = ExtResource( 1 )
