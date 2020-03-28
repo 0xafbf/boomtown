@@ -2,14 +2,12 @@
 
 [ext_resource path="res://Scripts/Bomb.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/TrailPoint.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scripts/Panel.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Arrow.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/MouseControl.gd" type="Script" id=4]
 
 [sub_resource type="SphereShape" id=1]
 
 [sub_resource type="SphereMesh" id=2]
-
-[sub_resource type="BoxShape" id=3]
-extents = Vector3( 1, 0.317227, 1 )
 
 [node name="Spatial" type="Spatial"]
 
@@ -27,6 +25,7 @@ material/0 = null
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 0.219846, 0.671748, -0.707405, 0, 0.725146, 0.688595, 0.975535, -0.151385, 0.159421, -12.6324, 9.84378, 1.62405 )
+script = ExtResource( 4 )
 
 [node name="CSGCombiner" type="CSGCombiner" parent="."]
 use_collision = true
@@ -45,13 +44,20 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.936199, 10.3698 )
 width = 22.8986
 height = 5.7609
 
-[node name="Area" type="Area" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.39296, 0 )
-collision_layer = 3
-collision_mask = 3
-script = ExtResource( 3 )
+[node name="CSGBox5" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10.4318, 0.936199, -0.0619998 )
+width = 22.8986
+height = 5.7609
 
-[node name="CollisionShape" type="CollisionShape" parent="Area"]
-shape = SubResource( 3 )
+[node name="CSGBox4" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -10.4318, 0.936199, -0.0620007 )
+width = 22.8986
+height = 5.7609
 
-[node name="MeshInstance" type="MeshInstance" parent="Area/CollisionShape"]
+[node name="Arrow" parent="." instance=ExtResource( 3 )]
+
+[node name="Arrow2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 5.98069, 1.39296, 1.22605 )
+
+[node name="Arrow3" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.98069, 1.39296, 6.98134 )

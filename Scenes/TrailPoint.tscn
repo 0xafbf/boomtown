@@ -1,14 +1,20 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Powder.gd" type="Script" id=1]
 
 [sub_resource type="SphereShape" id=1]
-radius = 0.5
+radius = 0.6
 
 [sub_resource type="SphereMesh" id=2]
 
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 1, 0.607843, 0, 1 )
+
 [node name="TrailPoint" type="StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.89121, 0 )
 collision_layer = 2
 collision_mask = 2
+script = ExtResource( 1 )
+burn_time = 0.3
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 1 )
@@ -17,3 +23,9 @@ shape = SubResource( 1 )
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
 mesh = SubResource( 2 )
 material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="CollisionShape"]
+transform = Transform( 0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, 0, 0, 0 )
+visible = false
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )

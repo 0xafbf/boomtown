@@ -1,4 +1,5 @@
 extends KinematicBody
+class_name Bomb
 
 enum {COLOR_BLUE, COLOR_RED}
 

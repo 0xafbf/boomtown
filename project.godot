@@ -8,9 +8,20 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "KinematicBody",
+"class": "Bomb",
+"language": "GDScript",
+"path": "res://Scripts/Bomb.gd"
+}, {
+"base": "StaticBody",
+"class": "Powder",
+"language": "GDScript",
+"path": "res://Scripts/Powder.gd"
+} ]
 _global_script_class_icons={
-
+"Bomb": "",
+"Powder": ""
 }
 
 [application]
