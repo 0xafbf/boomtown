@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Destructible.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 1, 0.615686, 0.0117647, 1 )
+
+[node name="Destructible" type="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.20604, 0 )
+script = ExtResource( 1 )
+intact_path = NodePath("CollisionShape/MeshInstance")
+destroyed_path = NodePath("CollisionShape/MeshInstance2")
+destroyed = true
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="CollisionShape"]
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="CollisionShape"]
+visible = false
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )

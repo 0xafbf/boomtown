@@ -14,7 +14,7 @@ albedo_color = Color( 1, 0.607843, 0, 1 )
 collision_layer = 2
 collision_mask = 2
 script = ExtResource( 1 )
-burn_time = 0.3
+burn_time = 0.1
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 1 )

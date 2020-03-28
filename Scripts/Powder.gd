@@ -5,6 +5,8 @@ export var burn_time = 0.5
 var connected_powder = []
 var current_burn_time = 0
 export var burning: bool = false
+var bomb = null
+var burnt = false
 
 func _ready():
 	var space_state = get_world().direct_space_state
@@ -27,12 +29,16 @@ func _ready():
 				area.connected_powder.append(self)
 		
 func _physics_process(delta):
-	
+	if burnt:
+		return
 	if burning:
 		current_burn_time += delta
 		if current_burn_time > burn_time:
 			for powder in connected_powder:
 				powder.burn()
+			if bomb:
+				bomb.explode()
+			burnt = true
 				
 				
 func burn():
