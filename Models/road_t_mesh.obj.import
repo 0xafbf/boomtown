@@ -14,6 +14,6 @@ dest_files=[ "res://.import/road_t_mesh.obj-dbd3200c2a3ef7340feba76a5e4c3054.mes
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3( 1, 1, 1 )
+scale_mesh=Vector3( 0.3, 0.3, 0.3 )
 offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true
