@@ -12,7 +12,6 @@ func reset():
 	queue_free()
 
 func _ready():
-	Global.register_object(self)
 	
 	var space_state = get_world().direct_space_state
 	var query_params = PhysicsShapeQueryParameters.new()

@@ -8,10 +8,8 @@ func play():
 	pass
 func reset():
 	current_bomb = null
-	Global.register_object(self)
 
 func _ready():
-	Global.register_object(self)
 	var _key = connect("body_entered", self, "body_entered")
 
 func body_entered(body):

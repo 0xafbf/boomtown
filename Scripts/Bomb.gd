@@ -18,7 +18,6 @@ func play():
 	running = true
 	start_transform = global_transform
 func reset():
-	Global.register_object(self)
 	running = false
 	destroyed = false
 	global_transform = start_transform
@@ -34,7 +33,7 @@ func _physics_process(delta):
 	if destroyed:
 		return
 		
-	var velocity = transform.basis.z * speed
+	var velocity = -transform.basis.z * speed
 	velocity = move_and_slide(velocity)
 	var distance = velocity.length() * delta
 	distance_since_last += 	distance 

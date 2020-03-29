@@ -9,7 +9,9 @@
 [sub_resource type="SpatialMaterial" id=3]
 albedo_color = Color( 1, 0.615686, 0.0117647, 1 )
 
-[node name="Destructible" type="StaticBody"]
+[node name="Destructible" type="StaticBody" groups=[
+"simulate",
+]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.20604, 0 )
 script = ExtResource( 1 )
 intact_path = NodePath("CollisionShape/MeshInstance")

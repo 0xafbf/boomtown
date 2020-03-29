@@ -10,7 +10,9 @@ radius = 0.6
 [sub_resource type="SpatialMaterial" id=3]
 albedo_color = Color( 1, 0.607843, 0, 1 )
 
-[node name="TrailPoint" type="StaticBody"]
+[node name="TrailPoint" type="StaticBody" groups=[
+"simulate",
+]]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource( 1 )

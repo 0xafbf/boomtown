@@ -10,5 +10,5 @@ func on_play():
 func on_stop():
 	Global.restore_all()
 
-func _process(delta):
+func _process(_delta):
 	$TextScore.text = "%d" % Global.score
