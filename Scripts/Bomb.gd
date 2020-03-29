@@ -18,7 +18,6 @@ func play():
 	running = true
 	start_transform = global_transform
 func reset():
-	Global.register_object(self)
 	running = false
 	destroyed = false
 	global_transform = start_transform

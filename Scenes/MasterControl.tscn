@@ -1,0 +1,167 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Assets/PanelArrow.glb" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Arrow.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/GameUI.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/MouseControl.gd" type="Script" id=4]
+[ext_resource path="res://UI/icon_arrow.png" type="Texture" id=5]
+[ext_resource path="res://Character/BombaKawaii.glb" type="PackedScene" id=6]
+[ext_resource path="res://Scripts/Brush.gd" type="Script" id=7]
+[ext_resource path="res://UI/icon_bomb.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Bomb.tscn" type="PackedScene" id=9]
+
+[node name="Control" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="." groups=[
+"simulate",
+]]
+transform = Transform( 1, 0, 0, 0, 0.513751, 0.857939, 0, -0.857939, 0.513751, 0.790161, 15.4674, 10.6479 )
+script = ExtResource( 4 )
+brush_path = NodePath("../Brush")
+arrow_scene = ExtResource( 2 )
+bomb_scene = ExtResource( 9 )
+
+[node name="Control" type="Control" parent="Camera"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -582.0
+margin_bottom = -313.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TopBar" type="ColorRect" parent="Camera/Control"]
+anchor_right = 1.0
+margin_bottom = 60.0
+color = Color( 0.262745, 0.262745, 0.262745, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonPlay" type="Button" parent="Camera/Control/TopBar"]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 86.0
+margin_bottom = 53.0
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonStop" type="Button" parent="Camera/Control/TopBar"]
+margin_left = 101.0
+margin_top = 5.0
+margin_right = 175.0
+margin_bottom = 53.0
+text = "Stop"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextScore" type="RichTextLabel" parent="Camera/Control/TopBar"]
+margin_left = 228.0
+margin_top = 16.0
+margin_right = 335.0
+margin_bottom = 48.0
+
+[node name="SideBar" type="ColorRect" parent="Camera/Control"]
+anchor_bottom = 1.0
+margin_top = 60.0
+margin_right = 145.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BtnArrow" type="Button" parent="Camera/Control/SideBar"]
+margin_left = 12.0
+margin_top = 12.0
+margin_right = 100.0
+margin_bottom = 55.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="arrow_right" type="Sprite" parent="Camera/Control/SideBar/BtnArrow"]
+position = Vector2( 31.2566, 20.6159 )
+scale = Vector2( 0.224693, 0.224693 )
+texture = ExtResource( 5 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Camera/Control/SideBar/BtnArrow"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -24.0
+margin_top = -9.56305
+margin_bottom = 9.43695
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BtnBomb" type="Button" parent="Camera/Control/SideBar"]
+margin_left = 12.0
+margin_top = 67.1736
+margin_right = 100.0
+margin_bottom = 110.174
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="arrow_right" type="Sprite" parent="Camera/Control/SideBar/BtnBomb"]
+position = Vector2( 31.2566, 20.6159 )
+scale = Vector2( 0.224693, 0.224693 )
+texture = ExtResource( 8 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Camera/Control/SideBar/BtnBomb"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -24.0
+margin_top = -9.56305
+margin_bottom = 9.43695
+text = "4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BtnDelete" type="Button" parent="Camera/Control/SideBar"]
+margin_left = 12.0
+margin_top = 123.097
+margin_right = 100.0
+margin_bottom = 166.098
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="arrow_right" type="Sprite" parent="Camera/Control/SideBar/BtnDelete"]
+position = Vector2( 31.2566, 20.6159 )
+scale = Vector2( 0.224693, 0.224693 )
+texture = ExtResource( 8 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Camera/Control/SideBar/BtnDelete"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -24.0
+margin_top = -9.56305
+margin_bottom = 9.43695
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Brush" type="Spatial" parent="."]
+script = ExtResource( 7 )
+
+[node name="BrushBomb" parent="Brush" instance=ExtResource( 6 )]
+transform = Transform( -0.2, 0, -3.01992e-08, 0, 0.2, 0, 3.01992e-08, 0, -0.2, 0, 0, 0 )
+visible = false
+
+[node name="BrushArrow" parent="Brush" instance=ExtResource( 1 )]
+[connection signal="pressed" from="Camera/Control/SideBar/BtnArrow" to="Camera" method="_on_BtnArrow_pressed"]
+[connection signal="pressed" from="Camera/Control/SideBar/BtnBomb" to="Camera" method="_on_BtnBomb_pressed"]
+[connection signal="pressed" from="Camera/Control/SideBar/BtnDelete" to="Camera" method="_on_BtnDelete_pressed"]
