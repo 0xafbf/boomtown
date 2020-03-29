@@ -298,7 +298,7 @@ mesh = ExtResource( 4 )
 material/0 = ExtResource( 2 )
 
 [node name="road_square_mesh" parent="." instance=ExtResource( 5 )]
-transform = Transform( 8, 0, 0, 0, 1, 0, 0, 0, 12, -50, 0, 70 )
+transform = Transform( 8, 0, 0, 0, 1, 0, 0, 0, 12, -50, -0.195958, 70 )
 
 [node name="Env_Water_Tile" type="MeshInstance" parent="."]
 transform = Transform( 30, 0, 0, 0, 1, 0, 0, 0, 30, -246.667, 0, 356.667 )

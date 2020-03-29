@@ -1,9 +1,30 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Models/apartment_small_mesh.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://Materials/Building01C.tres" type="Material" id=2]
+[ext_resource path="res://Materials/Burned/Building01BURNED.tres" type="Material" id=2]
+[ext_resource path="res://Scripts/Destructible.gd" type="Script" id=3]
+[ext_resource path="res://Materials/Building01B.tres" type="Material" id=4]
 
-[node name="apartment_small_mesh" type="MeshInstance"]
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 5.76161, 6.73793, 5.95009 )
+
+[node name="apartment_small_mesh" type="StaticBody"]
 transform = Transform( -1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, 0, 0, 0 )
+script = ExtResource( 3 )
+intact_path = NodePath("CollisionShape/apartment_small_mesh")
+destroyed_path = NodePath("CollisionShape/apartment_small_mesh2")
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 6.83971, 0 )
+shape = SubResource( 1 )
+
+[node name="apartment_small_mesh" type="MeshInstance" parent="CollisionShape"]
+transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, -6.71757, 0 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 4 )
+
+[node name="apartment_small_mesh2" type="MeshInstance" parent="CollisionShape"]
+transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, -6.71757, 0 )
+visible = false
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 2 )

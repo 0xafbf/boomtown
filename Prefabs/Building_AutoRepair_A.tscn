@@ -1,9 +1,30 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Models/Building_AutoRepair_A.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://Materials/SimpleTownGeneral.tres" type="Material" id=2]
+[ext_resource path="res://Materials/Burned/SimpleTownGeneralBURNED.tres" type="Material" id=3]
+[ext_resource path="res://Scripts/Destructible.gd" type="Script" id=4]
 
-[node name="Building_AutoRepair_A" type="MeshInstance"]
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 10.7182, 3.20279, 5.58487 )
+
+[node name="Building_AutoRepair_A" type="StaticBody"]
 transform = Transform( 0.3, 0, 8.88178e-16, 0, 0.3, 0, -8.88178e-16, 0, 0.3, 0, 0, 0 )
+script = ExtResource( 4 )
+intact_path = NodePath("CollisionShape/Building_AutoRepair_A")
+destroyed_path = NodePath("CollisionShape/Building_AutoRepair_A2")
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, -2.11758e-22, 0, 1, 0, 2.11758e-22, 0, 1, 0, 3.257, 0 )
+shape = SubResource( 1 )
+
+[node name="Building_AutoRepair_A" type="MeshInstance" parent="CollisionShape"]
+transform = Transform( 1, 0, -2.11758e-22, 0, 1, 0, 2.11758e-22, 0, 1, 0, -3.17557, 0 )
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 2 )
+
+[node name="Building_AutoRepair_A2" type="MeshInstance" parent="CollisionShape"]
+transform = Transform( 1, 0, -2.11758e-22, 0, 1, 0, 2.11758e-22, 0, 1, 0, -3.17557, 0 )
+visible = false
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 3 )
