@@ -8,7 +8,12 @@ export var burning: bool = false
 var bomb = null
 var burnt = false
 
+func reset():
+	queue_free()
+
 func _ready():
+	Global.register_object(self)
+	
 	var space_state = get_world().direct_space_state
 	var query_params = PhysicsShapeQueryParameters.new()
 	query_params.set_shape($CollisionShape.shape)
@@ -39,7 +44,6 @@ func _physics_process(delta):
 			if bomb:
 				bomb.explode()
 			burnt = true
-				
 				
 func burn():
 	burning = true
