@@ -15,18 +15,12 @@ _global_script_classes=[ {
 "path": "res://Scripts/Bomb.gd"
 }, {
 "base": "StaticBody",
-"class": "Destructible",
-"language": "GDScript",
-"path": "res://Scripts/Destructible.gd"
-}, {
-"base": "StaticBody",
 "class": "Powder",
 "language": "GDScript",
 "path": "res://Scripts/Powder.gd"
 } ]
 _global_script_class_icons={
 "Bomb": "",
-"Destructible": "",
 "Powder": ""
 }
 

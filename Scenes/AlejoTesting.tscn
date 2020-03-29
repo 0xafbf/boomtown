@@ -17,6 +17,8 @@ transform = Transform( 0.6, 0, 0, 0, 1, 0, 0, 0, 0.6, 0, 0, 0 )
 
 [node name="Bomb" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.699, 1, 8.667 )
+speed = null
+placement_distance = null
 
 [node name="Camera2" type="Camera" parent="."]
 transform = Transform( -1.57369e-07, -0.73456, 0.678544, 4.2167e-08, 0.678544, 0.73456, -1, 1.44209e-07, -7.58079e-08, 7, 18, 26 )
@@ -24,18 +26,28 @@ script = ExtResource( 5 )
 
 [node name="apartment_large_mesh" parent="." instance=ExtResource( 2 )]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -18.4613, 0, 37.8681 )
+score = null
+destroyed = null
 
 [node name="apartment_small_mesh" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -22.843, 0, 37.6934 )
+score = null
+destroyed = null
 
 [node name="Building_AutoRepair_A" parent="." instance=ExtResource( 6 )]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -4.28752, 0, 38.1418 )
+score = null
+destroyed = null
 
 [node name="Building_CoffeeShop" parent="." instance=ExtResource( 8 )]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -10.2363, -9.53674e-07, 38.3849 )
+score = null
+destroyed = null
 
 [node name="Building_House_01" parent="." instance=ExtResource( 7 )]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -14.4114, 0, 39.1604 )
+score = null
+destroyed = null
 
 [node name="Building_House_09" parent="." instance=ExtResource( 9 )]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -28.0852, 0, 38.0608 )
