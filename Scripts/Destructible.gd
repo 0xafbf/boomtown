@@ -28,3 +28,4 @@ func destroy():
 	intact_object.visible = !destroyed
 	destroyed_object.visible = destroyed
 	Global.score += score
+	

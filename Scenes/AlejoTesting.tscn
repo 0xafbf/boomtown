@@ -1,14 +1,18 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/Level Base Template.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Prefabs/apartment_large_mesh.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Destructible/apartment_large_mesh.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Bomb.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Prefabs/apartment_small_mesh.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Destructible/apartment_small_mesh.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scripts/MouseControl.gd" type="Script" id=5]
-[ext_resource path="res://Prefabs/Building_AutoRepair_A.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Prefabs/Building_House_01.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Prefabs/Building_CoffeeShop.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Prefabs/Building_House_09.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Prefabs/Destructible/Building_AutoRepair_A.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/Destructible/Building_House_01.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/Destructible/Building_CoffeeShop.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Prefabs/Destructible/Building_House_09.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Prefabs/Road_divider_mesh.tscn" type="PackedScene" id=10]
+
+
+
 
 [node name="Spatial" type="Spatial"]
 
@@ -25,29 +29,22 @@ transform = Transform( -1.57369e-07, -0.73456, 0.678544, 4.2167e-08, 0.678544, 0
 script = ExtResource( 5 )
 
 [node name="apartment_large_mesh" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -18.4613, 0, 37.8681 )
-score = null
-destroyed = null
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -18.4613, 0, 43.8681 )
 
 [node name="apartment_small_mesh" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -22.843, 0, 37.6934 )
-score = null
-destroyed = null
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -22.843, 0, 43.6934 )
 
 [node name="Building_AutoRepair_A" parent="." instance=ExtResource( 6 )]
-transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -4.28752, 0, 38.1418 )
-score = null
-destroyed = null
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -4.28752, 0, 44.1418 )
 
 [node name="Building_CoffeeShop" parent="." instance=ExtResource( 8 )]
-transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -10.2363, -9.53674e-07, 38.3849 )
-score = null
-destroyed = null
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -10.2363, -9.53674e-07, 44.3849 )
 
 [node name="Building_House_01" parent="." instance=ExtResource( 7 )]
-transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -14.4114, 0, 39.1604 )
-score = null
-destroyed = null
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -14.4114, 0, 45.1604 )
 
 [node name="Building_House_09" parent="." instance=ExtResource( 9 )]
-transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -28.0852, 0, 38.0608 )
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -28.0852, 0, 44.0608 )
+
+[node name="Road_divider_mesh" parent="." instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 35 )

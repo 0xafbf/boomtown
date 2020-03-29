@@ -1,0 +1,63 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scenes/cuadra 1 .tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Big Level Base Template.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/cuadra 3 .tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/cuadra 4.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/cuadra 2 .tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Bomb.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Hud.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scripts/MouseControl.gd" type="Script" id=8]
+[ext_resource path="res://Prefabs/Destructible/Building_Shop04.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Prefabs/Destructible/Building_Shop01.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/Destructible/Building_Cinema.tscn" type="PackedScene" id=11]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="AlejoTesting" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -6, 0, 36 )
+
+[node name="Spatial3" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.3, 0, -6.19896e-08, 0, 0.3, 0, 6.19896e-08, 0, -0.3, 27.2, 0, 3.2 )
+
+[node name="Spatial11" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.3, 0, 8.82165e-08, 0, 0.3, 0, -8.82165e-08, 0, 0.3, 31.2, 0, -20.2 )
+
+[node name="Spatial5" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -26.4, 0, 1 )
+
+[node name="Spatial4" parent="." instance=ExtResource( 4 )]
+transform = Transform( -0.3, 0, -9.77524e-08, 0, 0.3, 0, 9.77524e-08, 0, -0.3, -37, 0, 44 )
+
+[node name="Spatial6" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.88762e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -4.88762e-08, -26.6, 0, 23 )
+
+[node name="Spatial9" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.3, 0, -3.57628e-08, 0, 0.3, 0, 3.57628e-08, 0, 0.3, 30.2, 0, 15.8 )
+
+[node name="Spatial10" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.3, 0, 9.53596e-09, 0, 0.3, 0, -9.53596e-09, 0, -0.3, 28.2, 0, -32.8 )
+
+[node name="Spatial12" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 24, 0, 32 )
+
+[node name="Bomb" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 9, 25, 41 )
+script = ExtResource( 8 )
+
+[node name="ColorRect" parent="." instance=ExtResource( 7 )]
+
+[node name="Building_Shop01" parent="." instance=ExtResource( 10 )]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 3, 0, 25 )
+
+[node name="Building_Shop02" parent="." instance=ExtResource( 9 )]
+transform = Transform( -0.000110173, 6.20627e-05, -0.3, 8.40904e-05, 0.3, 6.20339e-05, 0.3, -8.40692e-05, -0.00011019, -2, 0, 22 )
+
+[node name="Building_Cinema" parent="." instance=ExtResource( 11 )]
+transform = Transform( -0.000110173, 6.20627e-05, -0.3, 8.40904e-05, 0.3, 6.20339e-05, 0.3, -8.40692e-05, -0.00011019, 7, 0, 19 )

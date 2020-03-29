@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Destructible.gd" type="Script" id=1]
+[ext_resource path="res://Materials/Burned/SimpleTownGeneralBURNED.tres" type="Material" id=2]
+[ext_resource path="res://Materials/SimpleTownGeneral.tres" type="Material" id=3]
+[ext_resource path="res://Models/Building_House_02.obj" type="ArrayMesh" id=4]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 5.44733, 7.64843, 9.3445 )
+
+[node name="Building_House_01" type="StaticBody"]
+transform = Transform( -0.000110173, 6.20627e-05, -0.3, 8.40904e-05, 0.3, 6.20339e-05, 0.3, -8.40692e-05, -0.00011019, 0, 0, 0 )
+script = ExtResource( 1 )
+intact_path = NodePath("CollisionShape/Building_House_01")
+destroyed_path = NodePath("CollisionShape/Building_House_02")
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, -2.91038e-11, -5.82077e-11, 1, -1.35003e-11, -8.73115e-11, 1.79128e-11, 1, 0.0021766, 7.76508, 0.00160561 )
+shape = SubResource( 1 )
+
+[node name="Building_House_01" type="MeshInstance" parent="CollisionShape"]
+transform = Transform( 1, 5.82077e-11, -2.91038e-11, -1.74623e-10, 1, -7.17435e-11, -3.20142e-10, 3.24292e-11, 1, -0.00213434, -7.6143, -0.00157443 )
+mesh = ExtResource( 4 )
+material/0 = ExtResource( 3 )
+
+[node name="Building_House_02" type="MeshInstance" parent="CollisionShape"]
+transform = Transform( 1, 5.82077e-11, -2.91038e-11, -1.74623e-10, 1, -7.17435e-11, -3.20142e-10, 3.24292e-11, 1, -0.00213434, -7.6143, -0.00157443 )
+visible = false
+mesh = ExtResource( 4 )
+material/0 = ExtResource( 2 )

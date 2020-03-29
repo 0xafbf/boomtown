@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Prefabs/Destructible/Building_House_10.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Prefabs/Destructible/Building_House_11.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Destructible/Building_House_15.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Destructible/Building_Garage_01.tscn" type="PackedScene" id=4]
+
+[node name="Spatial" type="Spatial"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0 )
+
+[node name="Building_House_02" parent="." instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 16.6667 )
+intact_path = NodePath("../../CollisionShape/Building_House_01")
+destroyed_path = NodePath("../../CollisionShape/Building_House_02")
+
+[node name="Building_House_03" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.6667, 0, 0 )
+intact_path = NodePath("../CollisionShape/Building_House_01")
+destroyed_path = NodePath("../CollisionShape/Building_House_02")
+
+[node name="Building_House_01" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="Building_House_04" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.6667, 0, 16.6667 )

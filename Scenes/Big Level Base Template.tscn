@@ -1,0 +1,628 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Materials/road2.tres" type="Material" id=1]
+[ext_resource path="res://Materials/SimpleTownGeneral.tres" type="Material" id=2]
+[ext_resource path="res://Prefabs/road_square_mesh.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Env_Beach_Straight.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/road_bend_left_mesh.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/Env_Beach_Corner.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/road_straight_clear_mesh.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Models/road_bend_right_mesh.obj" type="ArrayMesh" id=8]
+[ext_resource path="res://Models/Env_Beach_Straight.obj" type="ArrayMesh" id=9]
+[ext_resource path="res://Models/Env_Water_Tile.obj" type="ArrayMesh" id=10]
+
+[node name="AlejoTesting" type="Spatial"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0 )
+
+[node name="Env_Beach_Straight" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -60 )
+
+[node name="Env_Beach_Straight6" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, -60 )
+
+[node name="Env_Beach_Straight14" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, -60 )
+
+[node name="Env_Beach_Straight28" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, -60 )
+
+[node name="Env_Beach_Straight29" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, -60 )
+
+[node name="Env_Beach_Straight30" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 63.3333, 0, -60 )
+
+[node name="Env_Beach_Straight27" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -60 )
+
+[node name="Env_Beach_Straight26" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.35783e-06, 0, -60 )
+
+[node name="Env_Beach_Straight12" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, -1, -20, 0, 80 )
+
+[node name="Env_Beach_Straight11" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, -1, -40, 0, 80 )
+
+[node name="Env_Beach_Straight13" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, -1, -60, 0, 80 )
+
+[node name="Env_Beach_Straight23" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, -1, 40, 0, 80 )
+
+[node name="Env_Beach_Straight24" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, -1, 60, 0, 80 )
+
+[node name="Env_Beach_Straight25" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, -1, 63.3333, 0, 80 )
+
+[node name="Env_Beach_Straight22" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, -1, 20, 0, 80 )
+
+[node name="Env_Beach_Straight21" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, -1, 6.35783e-06, 0, 80 )
+
+[node name="Env_Beach_Straight2" type="MeshInstance" parent="."]
+transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 83.3333, 0, -1.58946e-06 )
+mesh = ExtResource( 9 )
+material/0 = ExtResource( 2 )
+
+[node name="Env_Beach_Straight3" type="MeshInstance" parent="."]
+transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 83.3333, 0, 20 )
+mesh = ExtResource( 9 )
+material/0 = ExtResource( 2 )
+
+[node name="Env_Beach_Straight4" type="MeshInstance" parent="."]
+transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 83.3333, 0, 40 )
+mesh = ExtResource( 9 )
+material/0 = ExtResource( 2 )
+
+[node name="Env_Beach_Straight20" type="MeshInstance" parent="."]
+transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 83.3333, 0, -60 )
+mesh = ExtResource( 9 )
+material/0 = ExtResource( 2 )
+
+[node name="Env_Beach_Straight19" type="MeshInstance" parent="."]
+transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 83.3333, 0, -40 )
+mesh = ExtResource( 9 )
+material/0 = ExtResource( 2 )
+
+[node name="Env_Beach_Straight18" type="MeshInstance" parent="."]
+transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 83.3333, 0, -20 )
+mesh = ExtResource( 9 )
+material/0 = ExtResource( 2 )
+
+[node name="Env_Beach_Straight5" type="MeshInstance" parent="."]
+transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 83.3333, 0, 60 )
+mesh = ExtResource( 9 )
+material/0 = ExtResource( 2 )
+
+[node name="Env_Beach_Straight10" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, 1, 0, 4.37114e-08, -60, 0, -1.58946e-06 )
+mesh = ExtResource( 9 )
+material/0 = ExtResource( 2 )
+
+[node name="Env_Beach_Straight9" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, 1, 0, 4.37114e-08, -60, 0, 20 )
+mesh = ExtResource( 9 )
+material/0 = ExtResource( 2 )
+
+[node name="Env_Beach_Straight8" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, 1, 0, 4.37114e-08, -60, 0, 40 )
+mesh = ExtResource( 9 )
+material/0 = ExtResource( 2 )
+
+[node name="Env_Beach_Straight17" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, 1, 0, 4.37114e-08, -60, 0, -60 )
+mesh = ExtResource( 9 )
+material/0 = ExtResource( 2 )
+
+[node name="Env_Beach_Straight16" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, 1, 0, 4.37114e-08, -60, 0, -40 )
+mesh = ExtResource( 9 )
+material/0 = ExtResource( 2 )
+
+[node name="Env_Beach_Straight15" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, 1, 0, 4.37114e-08, -60, 0, -20 )
+mesh = ExtResource( 9 )
+material/0 = ExtResource( 2 )
+
+[node name="Env_Beach_Straight7" type="MeshInstance" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, 1, 0, 4.37114e-08, -60, 0, 60 )
+mesh = ExtResource( 9 )
+material/0 = ExtResource( 2 )
+
+[node name="Env_Beach_Corner" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 83.3333, 0, -60 )
+
+[node name="Env_Beach_Corner2" parent="." instance=ExtResource( 6 )]
+transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, -60 )
+
+[node name="Env_Beach_Corner4" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, -1, 83.3333, 0, 80 )
+
+[node name="Env_Beach_Corner3" parent="." instance=ExtResource( 6 )]
+transform = Transform( -1, 0, 0, 0, 1, 8.74228e-08, 0, 8.74228e-08, -1, -60, 0, 80 )
+
+[node name="road_straight_clear_mesh" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 80 )
+
+[node name="road_straight_clear_mesh116" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.6667, 0, 80 )
+
+[node name="road_straight_clear_mesh130" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73.3333, 0, 80 )
+
+[node name="road_straight_clear_mesh2" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, 70 )
+
+[node name="road_straight_clear_mesh12" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, 50 )
+
+[node name="road_straight_clear_mesh13" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, 46.6666 )
+
+[node name="road_straight_clear_mesh18" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, 30 )
+
+[node name="road_straight_clear_mesh84" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, 9.99999 )
+
+[node name="road_straight_clear_mesh83" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, -10 )
+
+[node name="road_straight_clear_mesh82" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, -13.3334 )
+
+[node name="road_straight_clear_mesh81" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, -30 )
+
+[node name="road_straight_clear_mesh44" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -6.66665, 0, -60 )
+
+[node name="road_straight_clear_mesh51" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -30, 0, -60 )
+
+[node name="road_straight_clear_mesh141" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 40, 0, -60 )
+
+[node name="road_straight_clear_mesh140" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 16.6667, 0, -60 )
+
+[node name="road_straight_clear_mesh155" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 76.6667, 0, -60 )
+
+[node name="road_straight_clear_mesh154" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 53.3333, 0, -60 )
+
+[node name="road_straight_clear_mesh64" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.3333, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh115" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3334, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh129" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh3" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, 66.6666 )
+
+[node name="road_straight_clear_mesh5" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, 63.3333 )
+
+[node name="road_straight_clear_mesh4" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, 60 )
+
+[node name="road_straight_clear_mesh7" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, 56.6666 )
+
+[node name="road_straight_clear_mesh6" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, 53.3333 )
+
+[node name="road_straight_clear_mesh11" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, 43.3333 )
+
+[node name="road_straight_clear_mesh10" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, 40 )
+
+[node name="road_straight_clear_mesh9" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, 36.6666 )
+
+[node name="road_straight_clear_mesh8" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, 33.3333 )
+
+[node name="road_straight_clear_mesh17" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, 26.6666 )
+
+[node name="road_straight_clear_mesh16" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, 23.3333 )
+
+[node name="road_straight_clear_mesh15" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, 20 )
+
+[node name="road_straight_clear_mesh14" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, 16.6666 )
+
+[node name="road_straight_clear_mesh19" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, 13.3333 )
+
+[node name="road_straight_clear_mesh80" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, 6.66659 )
+
+[node name="road_straight_clear_mesh79" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, 3.33329 )
+
+[node name="road_straight_clear_mesh78" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, -6.35783e-06 )
+
+[node name="road_straight_clear_mesh77" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, -3.3334 )
+
+[node name="road_straight_clear_mesh76" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, -6.66669 )
+
+[node name="road_straight_clear_mesh75" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, -16.6667 )
+
+[node name="road_straight_clear_mesh74" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, -20 )
+
+[node name="road_straight_clear_mesh73" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, -23.3334 )
+
+[node name="road_straight_clear_mesh72" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, -26.6667 )
+
+[node name="road_straight_clear_mesh71" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, -33.3334 )
+
+[node name="road_straight_clear_mesh70" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, -36.6667 )
+
+[node name="road_straight_clear_mesh69" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, -40 )
+
+[node name="road_straight_clear_mesh68" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, -43.3334 )
+
+[node name="road_straight_clear_mesh67" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 83.3333, 0, -46.6667 )
+
+[node name="road_straight_clear_mesh43" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -3.33333, 0, -60 )
+
+[node name="road_straight_clear_mesh42" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -9.99998, 0, -60 )
+
+[node name="road_straight_clear_mesh41" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -13.3333, 0, -60 )
+
+[node name="road_straight_clear_mesh40" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -16.6666, 0, -60 )
+
+[node name="road_straight_clear_mesh39" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -20, 0, -60 )
+
+[node name="road_straight_clear_mesh38" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -23.3333, 0, -60 )
+
+[node name="road_straight_clear_mesh50" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -26.6667, 0, -60 )
+
+[node name="road_straight_clear_mesh49" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -33.3333, 0, -60 )
+
+[node name="road_straight_clear_mesh48" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -36.6667, 0, -60 )
+
+[node name="road_straight_clear_mesh47" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -40, 0, -60 )
+
+[node name="road_straight_clear_mesh46" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -43.3333, 0, -60 )
+
+[node name="road_straight_clear_mesh45" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -46.6667, 0, -60 )
+
+[node name="road_straight_clear_mesh139" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 43.3333, 0, -60 )
+
+[node name="road_straight_clear_mesh138" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 36.6667, 0, -60 )
+
+[node name="road_straight_clear_mesh137" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 33.3334, 0, -60 )
+
+[node name="road_straight_clear_mesh136" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 30.0001, 0, -60 )
+
+[node name="road_straight_clear_mesh135" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 26.6667, 0, -60 )
+
+[node name="road_straight_clear_mesh134" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 23.3334, 0, -60 )
+
+[node name="road_straight_clear_mesh133" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 20, 0, -60 )
+
+[node name="road_straight_clear_mesh132" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 13.3334, 0, -60 )
+
+[node name="road_straight_clear_mesh131" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 9.99998, 0, -60 )
+
+[node name="road_straight_clear_mesh119" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 6.66668, 0, -60 )
+
+[node name="road_straight_clear_mesh118" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 3.33336, 0, -60 )
+
+[node name="road_straight_clear_mesh117" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -3.49681e-05, 0, -60 )
+
+[node name="road_straight_clear_mesh153" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 80, 0, -60 )
+
+[node name="road_straight_clear_mesh152" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 73.3333, 0, -60 )
+
+[node name="road_straight_clear_mesh151" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 70, 0, -60 )
+
+[node name="road_straight_clear_mesh150" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 66.6667, 0, -60 )
+
+[node name="road_straight_clear_mesh149" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 63.3333, 0, -60 )
+
+[node name="road_straight_clear_mesh148" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 60, 0, -60 )
+
+[node name="road_straight_clear_mesh147" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 56.6666, 0, -60 )
+
+[node name="road_straight_clear_mesh146" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 50, 0, -60 )
+
+[node name="road_straight_clear_mesh145" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, 46.6666, 0, -60 )
+
+[node name="road_straight_clear_mesh63" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3333, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh62" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.6667, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh61" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh60" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23.3333, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh59" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6667, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh58" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh57" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36.6666, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh56" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh55" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -43.3333, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh54" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.6667, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh53" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh65" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -53.3333, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh114" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.3334, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh113" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh112" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.6667, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh111" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3334, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh110" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh109" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6667, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh108" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0001, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh107" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.66667, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh106" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.33336, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh105" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.49681e-05, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh104" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.33334, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh103" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.66664, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh128" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh127" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 66.6666, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh126" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 63.3333, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh125" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh124" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 56.6666, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh123" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 53.3333, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh122" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 46.6667, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh121" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 43.3333, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh120" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh66" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -56.6666, 0, 79.9999 )
+
+[node name="road_straight_clear_mesh52" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -50, 0, -60 )
+
+[node name="road_bend_left_mesh" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 83.3333, 0, 80 )
+
+[node name="road_bend_left_mesh2" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, -1, 83.3333, 0, -60 )
+
+[node name="road_straight_clear_mesh37" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, 70 )
+
+[node name="road_straight_clear_mesh36" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, 50 )
+
+[node name="road_straight_clear_mesh35" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, 46.6666 )
+
+[node name="road_straight_clear_mesh34" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, 30 )
+
+[node name="road_straight_clear_mesh33" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, 66.6666 )
+
+[node name="road_straight_clear_mesh32" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, 63.3333 )
+
+[node name="road_straight_clear_mesh31" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, 60 )
+
+[node name="road_straight_clear_mesh30" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, 56.6666 )
+
+[node name="road_straight_clear_mesh29" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, 53.3333 )
+
+[node name="road_straight_clear_mesh28" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, 43.3333 )
+
+[node name="road_straight_clear_mesh27" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, 40 )
+
+[node name="road_straight_clear_mesh26" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, 36.6666 )
+
+[node name="road_straight_clear_mesh25" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, 33.3333 )
+
+[node name="road_straight_clear_mesh24" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, 26.6666 )
+
+[node name="road_straight_clear_mesh23" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, 23.3333 )
+
+[node name="road_straight_clear_mesh22" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, 20 )
+
+[node name="road_straight_clear_mesh21" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, 16.6666 )
+
+[node name="road_straight_clear_mesh20" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, 13.3333 )
+
+[node name="road_straight_clear_mesh102" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, 10 )
+
+[node name="road_straight_clear_mesh101" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, -10 )
+
+[node name="road_straight_clear_mesh100" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, -13.3334 )
+
+[node name="road_straight_clear_mesh99" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, -30 )
+
+[node name="road_straight_clear_mesh98" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, 6.6666 )
+
+[node name="road_straight_clear_mesh97" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, 3.33329 )
+
+[node name="road_straight_clear_mesh96" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, -6.35783e-06 )
+
+[node name="road_straight_clear_mesh95" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, -3.3334 )
+
+[node name="road_straight_clear_mesh94" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, -6.66669 )
+
+[node name="road_straight_clear_mesh93" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, -16.6667 )
+
+[node name="road_straight_clear_mesh92" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, -20 )
+
+[node name="road_straight_clear_mesh91" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, -23.3334 )
+
+[node name="road_straight_clear_mesh90" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, -26.6667 )
+
+[node name="road_straight_clear_mesh89" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, -33.3334 )
+
+[node name="road_straight_clear_mesh88" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, -36.6667 )
+
+[node name="road_straight_clear_mesh87" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, -40 )
+
+[node name="road_straight_clear_mesh86" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, -43.3334 )
+
+[node name="road_straight_clear_mesh85" parent="." instance=ExtResource( 7 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, -1, 0, 1.62921e-07, -60, 0, -46.6667 )
+
+[node name="road_bend_right_mesh" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 3.77496e-06, 79.9999 )
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 1 )
+
+[node name="road_bend_right_mesh2" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, -1, -60, 3.77496e-06, -60 )
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 1 )
+
+[node name="road_square_mesh" parent="." instance=ExtResource( 3 )]
+transform = Transform( 26.136, 0, 0, 0, 1, 0, 0, 0, 25.08, -50, -0.195958, 73.3333 )
+
+[node name="Env_Water_Tile" type="MeshInstance" parent="."]
+transform = Transform( 30, 0, 0, 0, 1, 0, 0, 0, 30, -246.667, 0, 356.667 )
+mesh = ExtResource( 10 )
+material/0 = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}

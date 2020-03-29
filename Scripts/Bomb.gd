@@ -66,5 +66,6 @@ func explode():
 		var target = result["collider"]
 		print(target)
 		if target is Destructible:
+			
 			print("arst")
 			target.destroy()

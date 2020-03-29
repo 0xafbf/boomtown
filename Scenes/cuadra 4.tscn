@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Prefabs/Destructible/Building_AutoRepair_A.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Prefabs/Destructible/Building_Shop03.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Destructible/Building_Garage_03.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Destructible/apartment_small_mesh3.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Destructible/Building_Cinema.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/Destructible/Building_CoffeeShop.tscn" type="PackedScene" id=6]
+
+[node name="Spatial" type="Spatial"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0 )
+
+[node name="Building_Cinema" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="Building_CoffeeShop" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 2.96059e-15, 0, 1, 0, -2.96059e-15, 0, 1, -23.3333, 0, -3.33333 )
+
+[node name="apartment_small_mesh" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.999999, 0, 2.96059e-15, 0, 0.999999, 0, -2.96059e-15, 0, 0.999999, -36.6663, 0, -3.33334 )
+intact_path = NodePath("../../apartment_small_mesh/CollisionShape/apartment_small_mesh")
+destroyed_path = NodePath("../../apartment_small_mesh/CollisionShape/apartment_small_mesh2")
+
+[node name="Building_Shop01" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.999999, 0, -3.25841e-07, 0, 0.999999, 0, 3.25841e-07, 0, -0.999999, -19.9997, 0, 25.3333 )
+intact_path = NodePath("../../Building_Shop01/CollisionShape/Building_Shop01")
+destroyed_path = NodePath("../../Building_Shop01/CollisionShape/Building_Shop02")
+
+[node name="Building_AutoRepair_A" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.999999, 0, -3.25841e-07, 0, 0.999999, 0, 3.25841e-07, 0, -0.999999, 0.000336965, 0, 26.667 )
+intact_path = NodePath("../../Building_AutoRepair_A/CollisionShape/Building_AutoRepair_A")
+destroyed_path = NodePath("../../Building_AutoRepair_A/CollisionShape/Building_AutoRepair_A2")
+
+[node name="Building_House_01" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -36.667, 0, 26.667 )

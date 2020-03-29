@@ -1,0 +1,64 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Prefabs/hedge_mesh.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Prefabs/Destructible/Building_Shop03.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Destructible/Building_Shop05.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/grass_square_mesh.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/bush_small_mesh.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/Prop_Tree_01.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/Destructible/Building_House_01.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/Prop_Tree_02.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Prefabs/Destructible/Building_House_15.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Prefabs/Destructible/Building_Barbershop.tscn" type="PackedScene" id=10]
+
+[node name="Spatial" type="Spatial"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, -7 )
+
+[node name="grass_square_mesh" parent="." instance=ExtResource( 4 )]
+transform = Transform( 4, 0, 0, 0, 1, 0, 0, 0, 4, -6.66666, -7.94728e-07, 13.3333 )
+
+[node name="hedge_mesh" parent="grass_square_mesh" instance=ExtResource( 1 )]
+transform = Transform( 0.819651, 0, 0, 0, 2.51905, 0, 0, 0, 0.777217, -2.46873, 7.94729e-07, -0.17412 )
+
+[node name="hedge_mesh2" parent="grass_square_mesh" instance=ExtResource( 1 )]
+transform = Transform( 0.819651, 0, 0, 0, 2.51905, 0, 0, 0, 0.777217, -2.46873, 7.94729e-07, -4.82878 )
+
+[node name="hedge_mesh3" parent="grass_square_mesh" instance=ExtResource( 1 )]
+transform = Transform( -1.33538e-07, 0, 0.719646, 0, 2.51905, 0, -0.644983, 0, -9.22602e-08, -0.166389, 7.94729e-07, -2.51246 )
+
+[node name="hedge_mesh4" parent="grass_square_mesh" instance=ExtResource( 1 )]
+transform = Transform( -1.33538e-07, 0, 0.719646, 0, 2.51905, 0, -0.644983, 0, -9.22602e-08, -4.77659, 7.94729e-07, -2.51246 )
+
+[node name="bush_small_mesh" parent="grass_square_mesh" instance=ExtResource( 5 )]
+transform = Transform( 1.11111, 0, 0, 0, 3, 0, 0, 0, 1.2, -2.46914, -2.1855e-06, -2.66667 )
+
+[node name="grass_square_mesh2" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.34631e-07, 0, 2.64, 0, 1, 0, -3.08, 0, -1.15398e-07, -25.3333, -7.94728e-07, -1.33332 )
+
+[node name="Building_House_01" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.152333, 0, 0.525335 )
+
+[node name="Building_Barbershop" parent="." instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.3337, 0, -3.33333 )
+
+[node name="Building_Shop01" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.999999, 0, -3.25841e-07, 0, 0.999999, 0, 3.25841e-07, 0, -0.999999, -33.3337, 0, 23.3333 )
+intact_path = NodePath("../../Building_Shop01/CollisionShape/Building_Shop01")
+destroyed_path = NodePath("../../Building_Shop01/CollisionShape/Building_Shop02")
+
+[node name="Building_House_02" parent="." instance=ExtResource( 9 )]
+transform = Transform( -0.999999, 0, -3.25841e-07, 0, 0.999999, 0, 3.25841e-07, 0, -0.999999, -3.333, 0, 25.3333 )
+intact_path = NodePath("../../Building_House_01/CollisionShape/Building_House_01")
+destroyed_path = NodePath("../../Building_House_01/CollisionShape/Building_House_02")
+
+[node name="Building_Shop02" parent="." instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -20, 0, 23.333 )
+
+[node name="Prop_Tree_01" parent="." instance=ExtResource( 6 )]
+transform = Transform( -6.55671e-08, 0, 1, 0, 1.5, 0, -1.5, 0, -4.37114e-08, -12, -2.38419e-06, 8.66668 )
+
+[node name="Prop_Tree_02" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -29.3333, 0, 12 )
+
+[node name="bush_small_mesh2" parent="." instance=ExtResource( 5 )]
+transform = Transform( 4.44444, 0, 0, 0, 3, 0, 0, 0, 1.92, -35.2099, -2.98023e-06, 12.6667 )
