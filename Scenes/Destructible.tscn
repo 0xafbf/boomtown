@@ -14,7 +14,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.20604, 0 )
 script = ExtResource( 1 )
 intact_path = NodePath("CollisionShape/MeshInstance")
 destroyed_path = NodePath("CollisionShape/MeshInstance2")
-destroyed = true
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 1 )

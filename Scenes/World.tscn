@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Bomb.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Destructible.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Arrow.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scripts/MouseControl.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/GameUI.gd" type="Script" id=5]
 
 [node name="Spatial" type="Spatial"]
 
@@ -54,9 +55,48 @@ transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.98069
 
 [node name="Destructible" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7641, 2.24738, 4.11619 )
+score = 3
 
 [node name="Destructible2" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.72009, 2.24738, 4.11619 )
+score = 8
 
 [node name="Destructible3" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.24863, 2.24738, -2.43384 )
+score = 7
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+margin_bottom = 60.0
+color = Color( 0.262745, 0.262745, 0.262745, 1 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonPlay" type="Button" parent="ColorRect"]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 86.0
+margin_bottom = 53.0
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonStop" type="Button" parent="ColorRect"]
+margin_left = 101.0
+margin_top = 5.0
+margin_right = 175.0
+margin_bottom = 53.0
+text = "Stop"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextScore" type="RichTextLabel" parent="ColorRect"]
+margin_left = 228.0
+margin_top = 16.0
+margin_right = 335.0
+margin_bottom = 48.0
+text = "500"

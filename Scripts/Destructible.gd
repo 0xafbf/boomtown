@@ -1,5 +1,5 @@
 extends StaticBody
-
+class_name Destructible
 export var score = 5
 export var intact_path: NodePath
 export var destroyed_path: NodePath
@@ -7,8 +7,19 @@ export var destroyed_path: NodePath
 onready var intact_object: Spatial = get_node(intact_path)
 onready var destroyed_object: Spatial = get_node(destroyed_path)
 
-export var destroyed: bool = false
+var destroyed: bool = false
 
+func _ready():
+	Global.register_object(self)
+	
+func play():
+	pass
+func reset():
+	destroyed = false
+	intact_object.visible = !destroyed
+	destroyed_object.visible = destroyed
+	Global.register_object(self)
+	
 func destroy():
 	if destroyed:
 		return
@@ -16,4 +27,4 @@ func destroy():
 	
 	intact_object.visible = !destroyed
 	destroyed_object.visible = destroyed
-	
+	Global.score += score
