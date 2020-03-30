@@ -1,0 +1,46 @@
+[gd_resource type="MeshLibrary" load_steps=8 format=2]
+
+[ext_resource path="res://Models/road_square_mesh.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Models/road_straight_clear_mesh.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://Models/road_t_mesh.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://Models/road_straight_mesh.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://Models/road_CornerLines_mesh1.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://Models/road_crossing_mesh1.obj" type="ArrayMesh" id=6]
+[ext_resource path="res://Models/road_corner_mesh.obj" type="ArrayMesh" id=7]
+
+[resource]
+item/0/name = "straight"
+item/0/mesh = ExtResource( 4 )
+item/0/mesh_transform = null
+item/0/shapes = [  ]
+item/0/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+item/1/name = "corner"
+item/1/mesh = ExtResource( 5 )
+item/1/mesh_transform = null
+item/1/shapes = [  ]
+item/1/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+item/2/name = "T piece"
+item/2/mesh = ExtResource( 3 )
+item/2/mesh_transform = null
+item/2/shapes = [  ]
+item/2/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+item/3/name = "road crossing"
+item/3/mesh = ExtResource( 6 )
+item/3/mesh_transform = null
+item/3/shapes = [  ]
+item/3/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+item/4/name = "corner nolines"
+item/4/mesh = ExtResource( 7 )
+item/4/mesh_transform = null
+item/4/shapes = [  ]
+item/4/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+item/5/name = "clear"
+item/5/mesh = ExtResource( 1 )
+item/5/mesh_transform = null
+item/5/shapes = [  ]
+item/5/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+item/6/name = "straight clear"
+item/6/mesh = ExtResource( 2 )
+item/6/mesh_transform = null
+item/6/shapes = [  ]
+item/6/navmesh_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
