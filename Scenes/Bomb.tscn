@@ -1,40 +1,42 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Scenes/Powder.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scripts/Bomb.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Bomb.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Powder.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Character/BombaKawaii.glb" type="PackedScene" id=3]
 
 [sub_resource type="SphereShape" id=1]
 
-[sub_resource type="ParticlesMaterial" id=3]
-direction = Vector3( 0, 1, 0 )
-spread = 73.5
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0, 0.0815451, 0.150215, 0.339056, 0.480687, 0.733906, 0.83691, 0.939914 )
+colors = PoolColorArray( 0.984375, 0.9291, 0.630615, 1, 0.992188, 0.783867, 0.158905, 1, 0.953125, 0.39698, 0.0632935, 1, 0.898438, 0.147133, 0.0912476, 1, 1, 0, 0, 1, 0.761719, 0.761719, 0.761719, 1, 0.554688, 0.554688, 0.554688, 1, 0.449219, 0.449219, 0.449219, 1 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+
+[sub_resource type="ParticlesMaterial" id=4]
+spread = 180.0
 gravity = Vector3( 0, 0, 0 )
-initial_velocity = 25.0
-initial_velocity_random = 0.2
+initial_velocity = 98.53
+initial_velocity_random = 0.81
+angular_velocity = 1.02561e-011
 damping = 30.0
 damping_random = 0.44
-color = Color( 1, 0.603922, 0, 1 )
+color_ramp = SubResource( 3 )
 
-[sub_resource type="SpatialMaterial" id=4]
-params_billboard_mode = 1
-emission_enabled = true
-emission = Color( 0.913725, 0.537255, 0, 1 )
-emission_energy = 1.0
-emission_operator = 0
-emission_on_uv2 = false
+[sub_resource type="SpatialMaterial" id=5]
+vertex_color_use_as_albedo = true
 
-[sub_resource type="QuadMesh" id=5]
-material = SubResource( 4 )
+[sub_resource type="CubeMesh" id=6]
+material = SubResource( 5 )
 
-[sub_resource type="SphereShape" id=6]
+[sub_resource type="SphereShape" id=7]
 radius = 4.0008
 
 [node name="Bomb" type="KinematicBody" groups=[
 "simulate",
 ]]
-script = ExtResource( 2 )
-trail_template = ExtResource( 1 )
+script = ExtResource( 1 )
+trail_template = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
@@ -42,16 +44,16 @@ shape = SubResource( 1 )
 
 [node name="Particles" type="Particles" parent="CollisionShape"]
 emitting = false
-amount = 25
+amount = 50
 one_shot = true
 explosiveness = 0.8
-process_material = SubResource( 3 )
-draw_pass_1 = SubResource( 5 )
+process_material = SubResource( 4 )
+draw_pass_1 = SubResource( 6 )
 
 [node name="BombaKawaii" parent="CollisionShape" instance=ExtResource( 3 )]
-transform = Transform( -0.4, 0, -1.30337e-07, 0, 0.4, 0, 1.30337e-07, 0, -0.4, 0, -1, 0 )
+transform = Transform( -0.4, 0, -1.30337e-007, 0, 0.4, 0, 1.30337e-007, 0, -0.4, 0, -1, 0 )
 
 [node name="ExplosionRadius" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 disabled = true
