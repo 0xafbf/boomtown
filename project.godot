@@ -10,11 +10,17 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "StaticBody",
+"class": "Destructible",
+"language": "GDScript",
+"path": "res://Scripts/Destructible.gd"
+}, {
+"base": "StaticBody",
 "class": "Powder",
 "language": "GDScript",
 "path": "res://Scripts/Powder.gd"
 } ]
 _global_script_class_icons={
+"Destructible": "",
 "Powder": ""
 }
 
