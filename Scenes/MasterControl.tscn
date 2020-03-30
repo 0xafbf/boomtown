@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Assets/PanelArrow.glb" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Arrow.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://UI/stop-button.png" type="Texture" id=10]
 [ext_resource path="res://UI/play-button.png" type="Texture" id=11]
 [ext_resource path="res://UI/eraserGreen.png" type="Texture" id=12]
+[ext_resource path="res://UI/Hud_fondobotones.png" type="Texture" id=13]
 
 [node name="Control" type="Spatial"]
 
@@ -33,26 +34,41 @@ __meta__ = {
 }
 
 [node name="TopBar" type="ColorRect" parent="Camera/Control"]
-anchor_top = 1.0
+anchor_left = -0.002
+anchor_top = 0.779
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -132.735
+margin_left = 0.197353
+margin_top = -0.13501
+margin_right = -1.85065
 margin_bottom = -0.735107
-color = Color( 0, 0, 0, 0.258824 )
+color = Color( 0, 0, 0, 0 )
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Fondo" type="TextureRect" parent="Camera/Control/TopBar"]
+anchor_right = 0.629
+anchor_bottom = 0.976
+margin_top = -8.0
+margin_right = 428.904
+margin_bottom = 91.1681
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="ButtonPlay" type="Button" parent="Camera/Control/TopBar"]
-anchor_left = 0.5
-anchor_top = 0.5
+anchor_left = 0.389
+anchor_top = 0.04
 anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = 32.2089
-margin_top = -60.7369
-margin_right = 152.209
-margin_bottom = 59.2631
+anchor_bottom = 0.949
+margin_left = -0.33902
+margin_top = -0.0169568
+margin_right = 5.99707
+margin_bottom = -0.00485229
 icon = ExtResource( 11 )
 flat = true
 expand_icon = true
@@ -61,14 +77,14 @@ __meta__ = {
 }
 
 [node name="ButtonStop" type="Button" parent="Camera/Control/TopBar"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = 148.553
-margin_top = -60.5369
-margin_right = 268.553
-margin_bottom = 59.4632
+anchor_left = 0.496
+anchor_top = 0.041
+anchor_right = 0.627
+anchor_bottom = 0.95
+margin_left = 0.407684
+margin_top = 0.0510445
+margin_right = -13.7363
+margin_bottom = 0.0632477
 icon = ExtResource( 10 )
 flat = true
 expand_icon = true
@@ -83,9 +99,9 @@ margin_right = 411.979
 margin_bottom = 77.1587
 
 [node name="BtnArrow" type="Button" parent="Camera/Control/TopBar"]
-margin_left = 87.7545
+margin_left = 18.4169
 margin_top = 4.25671
-margin_right = 207.755
+margin_right = 138.417
 margin_bottom = 124.257
 text = "1"
 icon = ExtResource( 5 )
@@ -96,9 +112,9 @@ __meta__ = {
 }
 
 [node name="BtnBomb" type="Button" parent="Camera/Control/TopBar"]
-margin_left = 244.807
+margin_left = 145.323
 margin_top = 3.39734
-margin_right = 364.807
+margin_right = 265.323
 margin_bottom = 123.397
 text = "2"
 icon = ExtResource( 8 )
@@ -109,10 +125,10 @@ __meta__ = {
 }
 
 [node name="BtnDelete" type="Button" parent="Camera/Control/TopBar"]
-margin_left = 385.47
-margin_top = 6.23859
-margin_right = 505.47
-margin_bottom = 126.239
+margin_left = 263.375
+margin_top = 1.71656
+margin_right = 383.375
+margin_bottom = 121.717
 icon = ExtResource( 12 )
 flat = true
 expand_icon = true
