@@ -38,8 +38,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -132.735
 margin_bottom = -0.735107
-color = Color( 0, 0, 0, 1 )
+color = Color( 0, 0, 0, 0.258824 )
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ButtonPlay" type="Button" parent="Camera/Control/TopBar"]
 anchor_left = 0.5

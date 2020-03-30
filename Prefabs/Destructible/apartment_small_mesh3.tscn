@@ -13,6 +13,7 @@ extents = Vector3( 5.76161, 5, 5.95009 )
 ]]
 transform = Transform( -1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, 0, 0, 0 )
 script = ExtResource( 3 )
+score = 10
 intact_path = NodePath("apartment_small_mesh")
 destroyed_path = NodePath("apartment_small_mesh2")
 

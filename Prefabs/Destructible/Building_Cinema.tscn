@@ -13,6 +13,7 @@ extents = Vector3( 17, 6.1, 10.9 )
 ]]
 transform = Transform( -0.000110173, 6.20627e-05, -0.3, 8.40904e-05, 0.3, 6.20339e-05, 0.3, -8.40692e-05, -0.00011019, 0, 0, 0 )
 script = ExtResource( 3 )
+score = 20
 intact_path = NodePath("Building_Cinema")
 destroyed_path = NodePath("Building_Cinema2")
 

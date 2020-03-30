@@ -13,6 +13,7 @@ extents = Vector3( 10.2, 3.20279, 4.5 )
 ]]
 transform = Transform( 0.3, 0, 8.88178e-16, 0, 0.3, 0, -8.88178e-16, 0, 0.3, 0, 0, 0 )
 script = ExtResource( 4 )
+score = 15
 intact_path = NodePath("Building_AutoRepair_A")
 destroyed_path = NodePath("Building_AutoRepair_A2")
 

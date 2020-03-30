@@ -11,6 +11,7 @@ extents = Vector3( 10.1337, 7.64843, 12.5849 )
 [node name="Building_House_01" type="StaticBody"]
 transform = Transform( -0.000110173, 6.20627e-05, -0.3, 8.40904e-05, 0.3, 6.20339e-05, 0.3, -8.40692e-05, -0.00011019, 0, 0, 0 )
 script = ExtResource( 1 )
+score = 10
 intact_path = NodePath("CollisionShape/Building_House_01")
 destroyed_path = NodePath("CollisionShape/Building_House_02")
 

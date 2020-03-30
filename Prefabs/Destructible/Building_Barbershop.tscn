@@ -17,7 +17,7 @@ intact_path = NodePath("Building_Barbershop")
 destroyed_path = NodePath("Building_Barbershop2")
 
 [node name="Building_Barbershop" type="MeshInstance" parent="."]
-transform = Transform( 1, 5.82077e-11, -5.82077e-11, -2.61934e-10, 1, -1.0079e-10, -4.65661e-10, 4.70095e-11, 1, 4.22601e-05, 0.15078, 3.11797e-05 )
+transform = Transform( 1, 5.82077e-11, -5.82077e-11, -3.49246e-10, 1, -1.15357e-10, -5.82077e-10, 6.15472e-11, 1, 4.22601e-05, 0.15078, 3.11797e-05 )
 mesh = ExtResource( 3 )
 material/0 = ExtResource( 1 )
 
