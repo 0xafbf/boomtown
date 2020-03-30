@@ -10,6 +10,7 @@ onready var destroyed_object: Spatial = get_node(destroyed_path)
 var destroyed: bool = false
 	
 
+
 func reset():
 	destroyed = false
 	intact_object.visible = !destroyed
