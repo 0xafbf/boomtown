@@ -17,3 +17,4 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="PanelArrow" parent="CollisionShape" instance=ExtResource( 2 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
