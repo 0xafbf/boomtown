@@ -88,7 +88,7 @@ position = Vector2( 31.2566, 20.6159 )
 scale = Vector2( 0.224693, 0.224693 )
 texture = ExtResource( 5 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Camera/Control/SideBar/BtnArrow"]
+[node name="TxtArrowCount" type="RichTextLabel" parent="Camera/Control/SideBar/BtnArrow"]
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
@@ -115,7 +115,7 @@ position = Vector2( 31.2566, 20.6159 )
 scale = Vector2( 0.224693, 0.224693 )
 texture = ExtResource( 8 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Camera/Control/SideBar/BtnBomb"]
+[node name="TxtBombCount" type="RichTextLabel" parent="Camera/Control/SideBar/BtnBomb"]
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
@@ -141,18 +141,6 @@ __meta__ = {
 position = Vector2( 31.2566, 20.6159 )
 scale = Vector2( 0.224693, 0.224693 )
 texture = ExtResource( 8 )
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Camera/Control/SideBar/BtnDelete"]
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-margin_left = -24.0
-margin_top = -9.56305
-margin_bottom = 9.43695
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Brush" type="Spatial" parent="."]
 script = ExtResource( 7 )
