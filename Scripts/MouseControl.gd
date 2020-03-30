@@ -100,8 +100,19 @@ func _unhandled_input(event):
 				if not started:
 					started = true
 					target.burn()
-	
+
+export var cam_speed = 10
+
 func _process(delta):
+	var right = Input.get_action_strength("right") - Input.get_action_strength("left")
+	var forward = Input.get_action_strength("forward") - Input.get_action_strength("back")
+	
+	var right_direction = (-global_transform.basis.z).cross(Vector3.UP)
+	var fwd_direction = Vector3.UP.cross(global_transform.basis.x)	
+	
+	var movement = right * right_direction.normalized()
+	movement += forward * fwd_direction.normalized()	
+	translation += delta * cam_speed * movement
 	$Control/SideBar/BtnArrow/TxtArrowCount.text = "%d" % max_arrows
 	$Control/SideBar/BtnBomb/TxtBombCount.text = "%d" % max_bombs
 	

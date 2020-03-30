@@ -64,7 +64,8 @@ score = 7
 [node name="Control" parent="." instance=ExtResource( 4 )]
 
 [node name="Control" parent="Control/Camera" index="0"]
-margin_right = 0.0
+margin_left = 1.05264
+margin_right = 1.05261
 margin_bottom = 0.0
 
 [node name="TopBar" parent="Control/Camera/Control" index="0"]
@@ -89,34 +90,6 @@ scale = Vector2( 0.0405778, 0.0405778 )
 [node name="arrow_right" parent="Control/Camera/Control/SideBar/BtnDelete" index="0"]
 position = Vector2( 24.5944, 22.7744 )
 scale = Vector2( 0.0398071, 0.0398071 )
-
-[node name="ScoreScreen" type="ColorRect" parent="Control/Camera/Control" index="2"]
-visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -248.0
-margin_top = -155.0
-margin_right = 249.0
-margin_bottom = 155.0
-color = Color( 0, 0, 0, 1 )
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/Camera/Control/ScoreScreen"]
-margin_left = 138.0
-margin_top = 96.0
-margin_right = 281.0
-margin_bottom = 151.0
-text = "SUCCESS
-
-Score:"
-
-[node name="TextScore" type="RichTextLabel" parent="Control/Camera/Control/ScoreScreen"]
-margin_left = 146.55
-margin_top = 145.4
-margin_right = 289.55
-margin_bottom = 200.4
-text = "65535"
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.537977, -0.543252, 0.644561, 0, 0.76464, 0.644457, -0.84296, -0.346703, 0.411359, 0, 6.00231, 0 )

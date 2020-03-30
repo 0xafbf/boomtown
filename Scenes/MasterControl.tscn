@@ -142,6 +142,35 @@ position = Vector2( 31.2566, 20.6159 )
 scale = Vector2( 0.224693, 0.224693 )
 texture = ExtResource( 8 )
 
+[node name="ScoreScreen" type="ColorRect" parent="Camera/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -246.947
+margin_top = -155.0
+margin_right = 250.053
+margin_bottom = 155.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Camera/Control/ScoreScreen"]
+margin_left = 138.0
+margin_top = 96.0
+margin_right = 281.0
+margin_bottom = 151.0
+text = "SUCCESS
+
+Score:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextScore" type="RichTextLabel" parent="Camera/Control/ScoreScreen"]
+margin_left = 146.55
+margin_top = 145.4
+margin_right = 289.55
+margin_bottom = 200.4
+
 [node name="Brush" type="Spatial" parent="."]
 script = ExtResource( 7 )
 
