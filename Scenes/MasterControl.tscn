@@ -5,7 +5,7 @@
 [ext_resource path="res://Scripts/GameUI.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/MouseControl.gd" type="Script" id=4]
 [ext_resource path="res://UI/icon_arrow.png" type="Texture" id=5]
-[ext_resource path="res://Character/BombaKawaii.glb" type="PackedScene" id=6]
+[ext_resource path="res://Character/BombaKawaiiScene.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scripts/Brush.gd" type="Script" id=7]
 [ext_resource path="res://UI/icon_bomb.png" type="Texture" id=8]
 [ext_resource path="res://Scenes/Bomb.tscn" type="PackedScene" id=9]
@@ -154,10 +154,11 @@ margin_bottom = 200.4
 script = ExtResource( 7 )
 
 [node name="BrushBomb" parent="Brush" instance=ExtResource( 6 )]
-transform = Transform( -0.2, 0, -3.01992e-08, 0, 0.2, 0, 3.01992e-08, 0, -0.2, 0, 0, 0 )
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0 )
 visible = false
 
 [node name="BrushArrow" parent="Brush" instance=ExtResource( 1 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
 [connection signal="pressed" from="Camera/Control/TopBar/BtnArrow" to="Camera" method="_on_BtnArrow_pressed"]
 [connection signal="pressed" from="Camera/Control/TopBar/BtnBomb" to="Camera" method="_on_BtnBomb_pressed"]
 [connection signal="pressed" from="Camera/Control/TopBar/BtnDelete" to="Camera" method="_on_BtnDelete_pressed"]
