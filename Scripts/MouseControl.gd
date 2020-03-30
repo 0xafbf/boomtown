@@ -113,8 +113,8 @@ func _process(delta):
 	var movement = right * right_direction.normalized()
 	movement += forward * fwd_direction.normalized()	
 	translation += delta * cam_speed * movement
-	$Control/SideBar/BtnArrow/TxtArrowCount.text = "%d" % max_arrows
-	$Control/SideBar/BtnBomb/TxtBombCount.text = "%d" % max_bombs
+	$Control/TopBar/BtnArrow.text = "%d" % max_arrows
+	$Control/TopBar/BtnBomb.text = "%d" % max_bombs
 	
 	$Control/ScoreScreen.visible = Global.report_now
 	$Control/ScoreScreen/TextScore.text = "%d" % Global.score
