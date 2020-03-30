@@ -15,18 +15,12 @@ _global_script_classes=[ {
 "path": "res://Scripts/Bomb.gd"
 }, {
 "base": "StaticBody",
-"class": "Destructible",
-"language": "GDScript",
-"path": "res://Scripts/Destructible.gd"
-}, {
-"base": "StaticBody",
 "class": "Powder",
 "language": "GDScript",
 "path": "res://Scripts/Powder.gd"
 } ]
 _global_script_class_icons={
 "Bomb": "",
-"Destructible": "",
 "Powder": ""
 }
 
@@ -35,10 +29,6 @@ _global_script_class_icons={
 config/name="gcj2020"
 run/main_scene="res://Scenes/World.tscn"
 config/icon="res://icon.png"
-
-[autoload]
-
-Global="*res://Scripts/Global.gd"
 
 [rendering]
 
