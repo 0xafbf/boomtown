@@ -6,25 +6,27 @@
 [ext_resource path="res://Scripts/Destructible.gd" type="Script" id=4]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 5.11349, 7.52192, 6.57947 )
+extents = Vector3( 5.11349, 5.1, 4.2 )
 
-[node name="Building_CoffeeShop" type="StaticBody"]
+[node name="Building_CoffeeShop" type="StaticBody" groups=[
+"simulate",
+]]
 transform = Transform( 0.3, 0, 8.88178e-16, 0, 0.3, 0, -8.88178e-16, 0, 0.3, 0, 0, 0 )
 script = ExtResource( 4 )
-intact_path = NodePath("CollisionShape/Building_CoffeeShop")
-destroyed_path = NodePath("CollisionShape/Building_CoffeeShop2")
+intact_path = NodePath("Building_CoffeeShop")
+destroyed_path = NodePath("Building_CoffeeShop2")
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, -2.11758e-22, 0, 1, 0, 2.11758e-22, 0, 1, 0, 7.53934, 0 )
-shape = SubResource( 1 )
-
-[node name="Building_CoffeeShop" type="MeshInstance" parent="CollisionShape"]
-transform = Transform( 1, 0, -8.47033e-22, 0, 1, 0, 8.47033e-22, 0, 1, -0.0235915, -7.54801, 0.0315674 )
+[node name="Building_CoffeeShop" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, -1.27055e-21, 0, 1, 0, 1.27055e-21, 0, 1, -0.0235915, -0.00866969, 0.0315674 )
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 2 )
 
-[node name="Building_CoffeeShop2" type="MeshInstance" parent="CollisionShape"]
-transform = Transform( 1, 0, -4.23516e-22, 0, 1, 0, 4.23516e-22, 0, 1, 0, -7.53938, 0 )
+[node name="Building_CoffeeShop2" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, -6.35275e-22, 0, 1, 0, 6.35275e-22, 0, 1, 0, -3.97364e-05, 0 )
 visible = false
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, -1.69407e-21, 0, 1, 0, 1.69407e-21, 0, 1, -4.93432e-15, 5.53934, 1.66667 )
+shape = SubResource( 1 )

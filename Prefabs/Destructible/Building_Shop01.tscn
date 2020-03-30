@@ -8,7 +8,9 @@
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 5.62569, 5.44665, 4.87107 )
 
-[node name="Building_Shop01" type="StaticBody"]
+[node name="Building_Shop01" type="StaticBody" groups=[
+"simulate",
+]]
 transform = Transform( -0.000110173, 6.20627e-05, -0.3, 8.40904e-05, 0.3, 6.20339e-05, 0.3, -8.40692e-05, -0.00011019, 0, 0, 0 )
 script = ExtResource( 4 )
 intact_path = NodePath("Building_Shop01")

@@ -6,25 +6,27 @@
 [ext_resource path="res://Models/Building_House_011.obj" type="ArrayMesh" id=4]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 7.63609, 7.64843, 9.29343 )
+extents = Vector3( 6.9, 4.7, 6.9 )
 
-[node name="Building_House_01" type="StaticBody"]
+[node name="Building_House_01" type="StaticBody" groups=[
+"simulate",
+]]
 transform = Transform( -0.000110173, 6.20627e-05, -0.3, 8.40904e-05, 0.3, 6.20339e-05, 0.3, -8.40692e-05, -0.00011019, 0, 0, 0 )
 script = ExtResource( 1 )
-intact_path = NodePath("CollisionShape/Building_House_01")
-destroyed_path = NodePath("CollisionShape/Building_House_02")
+intact_path = NodePath("Building_House_01")
+destroyed_path = NodePath("Building_House_02")
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, -2.91038e-11, -5.82077e-11, 1, -1.35003e-11, -8.73115e-11, 1.79128e-11, 1, 0.0021766, 7.76508, 0.00160561 )
-shape = SubResource( 1 )
-
-[node name="Building_House_01" type="MeshInstance" parent="CollisionShape"]
-transform = Transform( 1, 5.82077e-11, -2.91038e-11, -1.74623e-10, 1, -7.17435e-11, -3.20142e-10, 3.24292e-11, 1, -0.00213434, -7.6143, -0.00157443 )
+[node name="Building_House_01" type="MeshInstance" parent="."]
+transform = Transform( 1, 5.82077e-11, -5.82077e-11, -2.61934e-10, 1, -1.0079e-10, -4.65661e-10, 4.70095e-11, 1, 4.22601e-05, 0.15078, 3.11797e-05 )
 mesh = ExtResource( 4 )
 material/0 = ExtResource( 3 )
 
-[node name="Building_House_02" type="MeshInstance" parent="CollisionShape"]
-transform = Transform( 1, 5.82077e-11, -2.91038e-11, -1.74623e-10, 1, -7.17435e-11, -3.20142e-10, 3.24292e-11, 1, -0.00213434, -7.6143, -0.00157443 )
+[node name="Building_House_02" type="MeshInstance" parent="."]
+transform = Transform( 1, 5.82077e-11, -5.82077e-11, -2.61934e-10, 1, -1.0079e-10, -4.65661e-10, 4.70095e-11, 1, 4.22601e-05, 0.15078, 3.11797e-05 )
 visible = false
 mesh = ExtResource( 4 )
 material/0 = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, -5.82077e-11, -1.74623e-10, 1, -5.71561e-11, -2.61934e-10, 3.24576e-11, 1, 0.00133568, 4.76508, 0.000985292 )
+shape = SubResource( 1 )

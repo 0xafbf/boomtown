@@ -8,7 +8,9 @@
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 5.78093, 7.78105, 5.87695 )
 
-[node name="apartment_large_mesh" type="StaticBody"]
+[node name="apartment_large_mesh" type="StaticBody" groups=[
+"simulate",
+]]
 transform = Transform( -1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, 0, 0, 0 )
 script = ExtResource( 3 )
 intact_path = NodePath("CollisionShape/apartment_large_mesh")
