@@ -29,6 +29,7 @@ margin_right = 201.0
 margin_bottom = -53.0
 icon = ExtResource( 2 )
 flat = true
+expand_icon = true
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false

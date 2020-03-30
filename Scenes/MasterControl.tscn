@@ -1,8 +1,7 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets/PanelArrow.glb" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Arrow.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scripts/GameUI.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/MouseControl.gd" type="Script" id=4]
 [ext_resource path="res://UI/icon_arrow.png" type="Texture" id=5]
 [ext_resource path="res://Character/BombaKawaiiScene.tscn" type="PackedScene" id=6]
@@ -33,25 +32,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TopBar" type="ColorRect" parent="Camera/Control"]
-anchor_left = -0.002
-anchor_top = 0.778
-anchor_right = 0.619
+[node name="TopBar" type="TextureRect" parent="Camera/Control"]
+anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 0.0480001
-margin_right = 0.143982
-margin_bottom = -1.0
-color = Color( 0, 0, 0, 0 )
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Fondo" type="TextureRect" parent="Camera/Control/TopBar"]
-anchor_right = 1.012
-anchor_bottom = 0.923
-margin_right = 429.368
-margin_bottom = 81.3324
+margin_top = -182.0
+margin_right = 1111.0
+margin_bottom = 42.0
 rect_scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 13 )
 expand = true
@@ -60,91 +46,72 @@ __meta__ = {
 }
 
 [node name="ButtonPlay" type="Button" parent="Camera/Control/TopBar"]
-anchor_left = 0.797
-anchor_top = 0.044
-anchor_right = 0.952
-anchor_bottom = 1.004
-margin_left = 6.108
-margin_top = -0.416807
-margin_right = 6.79303
-margin_bottom = -9.63566
+anchor_left = 0.80781
+anchor_top = 0.132923
+anchor_right = 0.963525
+anchor_bottom = 0.882923
 icon = ExtResource( 11 )
 flat = true
 expand_icon = true
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="ButtonStop" type="Button" parent="Camera/Control/TopBar"]
-anchor_left = 0.639
-anchor_top = 0.059
-anchor_right = 0.8
-anchor_bottom = 1.0
-margin_left = 5.19598
-margin_top = -0.599789
-margin_right = 4.44302
-margin_bottom = -10.955
+anchor_left = 0.643385
+anchor_top = 0.115628
+anchor_right = 0.803601
+anchor_bottom = 0.892413
 icon = ExtResource( 10 )
 flat = true
 expand_icon = true
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="TextScore" type="RichTextLabel" parent="Camera/Control/TopBar"]
-margin_left = 304.979
-margin_top = 53.1587
-margin_right = 411.979
-margin_bottom = 85.1589
+margin_left = 508.298
+margin_top = 88.5978
+margin_right = 615.298
+margin_bottom = 120.598
 
 [node name="BtnArrow" type="Button" parent="Camera/Control/TopBar"]
-anchor_left = 0.029
-anchor_top = 0.049
-anchor_right = 0.199
-anchor_bottom = 0.949
-margin_left = 0.156
-margin_top = -0.4778
-margin_right = 0.745972
-margin_bottom = -0.495468
+anchor_left = 0.0216022
+anchor_top = 0.0625
+anchor_right = 0.216022
+anchor_bottom = 0.933036
+margin_bottom = -1.52588e-05
 text = "1"
 icon = ExtResource( 5 )
 flat = true
 expand_icon = true
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="BtnBomb" type="Button" parent="Camera/Control/TopBar"]
-anchor_left = 0.3
-anchor_top = 0.052
-anchor_right = 0.452
-anchor_bottom = 0.955
-margin_left = 2.67737
-margin_top = 4.90554
-margin_right = 2.58136
-margin_bottom = -15.7222
+anchor_left = 0.248036
+anchor_top = 0.0935795
+anchor_right = 0.423734
+anchor_bottom = 0.905613
 text = "2"
 icon = ExtResource( 8 )
 flat = true
 expand_icon = true
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="BtnDelete" type="Button" parent="Camera/Control/TopBar"]
-anchor_left = 0.463
-anchor_top = 0.054
-anchor_right = 0.607
-anchor_bottom = 0.958
-margin_left = 3.73199
-margin_top = -0.538795
-margin_right = 3.22
-margin_bottom = -0.369865
+anchor_left = 0.46168
+anchor_top = 0.119531
+anchor_right = 0.629097
+anchor_bottom = 0.860602
 icon = ExtResource( 12 )
 flat = true
 expand_icon = true
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="ScoreScreen" type="ColorRect" parent="Camera/Control"]

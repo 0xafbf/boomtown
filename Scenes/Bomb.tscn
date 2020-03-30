@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scripts/Bomb.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Powder.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Character/BombaKawaii.glb" type="PackedScene" id=3]
+[ext_resource path="res://Character/BombaKawaiiScene.tscn" type="PackedScene" id=3]
 
 [sub_resource type="SphereShape" id=1]
 
@@ -18,7 +18,7 @@ spread = 180.0
 gravity = Vector3( 0, 0, 0 )
 initial_velocity = 98.53
 initial_velocity_random = 0.81
-angular_velocity = 1.02561e-011
+angular_velocity = 1.02561e-11
 damping = 30.0
 damping_random = 0.44
 color_ramp = SubResource( 3 )
@@ -42,6 +42,9 @@ trail_template = ExtResource( 2 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 shape = SubResource( 1 )
 
+[node name="BombaKawaii" parent="CollisionShape" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -1, 0 )
+
 [node name="Particles" type="Particles" parent="CollisionShape"]
 emitting = false
 amount = 50
@@ -49,9 +52,6 @@ one_shot = true
 explosiveness = 0.8
 process_material = SubResource( 4 )
 draw_pass_1 = SubResource( 6 )
-
-[node name="BombaKawaii" parent="CollisionShape" instance=ExtResource( 3 )]
-transform = Transform( -0.4, 0, -1.30337e-007, 0, 0.4, 0, 1.30337e-007, 0, -0.4, 0, -1, 0 )
 
 [node name="ExplosionRadius" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
