@@ -11,20 +11,21 @@ extents = Vector3( 5.76161, 6.73793, 5.95009 )
 [node name="apartment_small_mesh" type="StaticBody"]
 transform = Transform( -1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, 0, 0, 0 )
 script = ExtResource( 3 )
-intact_path = NodePath("CollisionShape/apartment_small_mesh")
-destroyed_path = NodePath("CollisionShape/apartment_small_mesh2")
+score = 10
+intact_path = NodePath("apartment_small_mesh")
+destroyed_path = NodePath("apartment_small_mesh2")
+
+[node name="apartment_small_mesh" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0, 0.122141, 0 )
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 4 )
+
+[node name="apartment_small_mesh2" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0, 0.122141, 0 )
+visible = false
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 6.83971, 0 )
 shape = SubResource( 1 )
-
-[node name="apartment_small_mesh" type="MeshInstance" parent="CollisionShape"]
-transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, -6.71757, 0 )
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 4 )
-
-[node name="apartment_small_mesh2" type="MeshInstance" parent="CollisionShape"]
-transform = Transform( 1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, -6.71757, 0 )
-visible = false
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 2 )

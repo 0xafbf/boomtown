@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Character/BombaKawaii.glb" type="PackedScene" id=1]
+[ext_resource path="res://Character/BombaKawaiiScene.gd" type="Script" id=2]
+
+[sub_resource type="AnimationNodeAnimation" id=1]
+animation = "Movement"
+
+[sub_resource type="AnimationNodeAnimation" id=2]
+animation = "static"
+
+[sub_resource type="AnimationNodeTimeScale" id=3]
+
+[sub_resource type="AnimationNodeBlend2" id=4]
+
+[sub_resource type="AnimationNodeBlendTree" id=5]
+graph_offset = Vector2( -346, 35 )
+nodes/Animation/node = SubResource( 2 )
+nodes/Animation/position = Vector2( -120, 140 )
+"nodes/Animation 2/node" = SubResource( 1 )
+"nodes/Animation 2/position" = Vector2( -260, 340 )
+nodes/TimeScale/node = SubResource( 3 )
+nodes/TimeScale/position = Vector2( -40, 320 )
+nodes/moving/node = SubResource( 4 )
+nodes/moving/position = Vector2( 180, 140 )
+nodes/output/position = Vector2( 420, 140 )
+node_connections = [ "output", 0, "moving", "moving", 0, "Animation", "moving", 1, "TimeScale", "TimeScale", 0, "Animation 2" ]
+
+[node name="BombaKawaiiScene" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "static"
+playback_speed = 2.0
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2"]
+tree_root = SubResource( 5 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/TimeScale/scale = 3.0
+parameters/moving/blend_amount = 0.0

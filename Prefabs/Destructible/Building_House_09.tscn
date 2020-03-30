@@ -6,26 +6,28 @@
 [ext_resource path="res://Materials/Burned/SimpleTownGeneralBURNED.tres" type="Material" id=4]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 7.39515, 7.4628, 7.7747 )
+extents = Vector3( 6.7, 4.4, 7.7747 )
 
-[node name="Building_House_09" type="StaticBody"]
+[node name="Building_House_09" type="StaticBody" groups=[
+"simulate",
+]]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0 )
 script = ExtResource( 3 )
-intact_path = NodePath("CollisionShape/Building_House_09")
-destroyed_path = NodePath("CollisionShape/Building_House_10")
+intact_path = NodePath("Building_House_09")
+destroyed_path = NodePath("Building_House_10")
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.43464, 0 )
-shape = SubResource( 1 )
-disabled = true
-
-[node name="Building_House_09" type="MeshInstance" parent="CollisionShape"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.47789, 0 )
+[node name="Building_House_09" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0432507, 0 )
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 2 )
 
-[node name="Building_House_10" type="MeshInstance" parent="CollisionShape"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.47789, 0 )
+[node name="Building_House_10" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0432507, 0 )
 visible = false
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.43464, 0 )
+shape = SubResource( 1 )
+disabled = true

@@ -6,25 +6,28 @@
 [ext_resource path="res://Scripts/Destructible.gd" type="Script" id=4]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 10.7182, 3.20279, 5.58487 )
+extents = Vector3( 10.2, 3.20279, 4.5 )
 
-[node name="Building_AutoRepair_A" type="StaticBody"]
+[node name="Building_AutoRepair_A" type="StaticBody" groups=[
+"simulate",
+]]
 transform = Transform( 0.3, 0, 8.88178e-16, 0, 0.3, 0, -8.88178e-16, 0, 0.3, 0, 0, 0 )
 script = ExtResource( 4 )
-intact_path = NodePath("CollisionShape/Building_AutoRepair_A")
-destroyed_path = NodePath("CollisionShape/Building_AutoRepair_A2")
+score = 15
+intact_path = NodePath("Building_AutoRepair_A")
+destroyed_path = NodePath("Building_AutoRepair_A2")
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, -2.11758e-22, 0, 1, 0, 2.11758e-22, 0, 1, 0, 3.257, 0 )
-shape = SubResource( 1 )
-
-[node name="Building_AutoRepair_A" type="MeshInstance" parent="CollisionShape"]
-transform = Transform( 1, 0, -2.11758e-22, 0, 1, 0, 2.11758e-22, 0, 1, 0, -3.17557, 0 )
+[node name="Building_AutoRepair_A" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, -4.23516e-22, 0, 1, 0, 4.23516e-22, 0, 1, 0, 0.0814299, 0 )
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 2 )
 
-[node name="Building_AutoRepair_A2" type="MeshInstance" parent="CollisionShape"]
-transform = Transform( 1, 0, -2.11758e-22, 0, 1, 0, 2.11758e-22, 0, 1, 0, -3.17557, 0 )
+[node name="Building_AutoRepair_A2" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, -4.23516e-22, 0, 1, 0, 4.23516e-22, 0, 1, 0, 0.0814299, 0 )
 visible = false
 mesh = ExtResource( 1 )
 material/0 = ExtResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, -2.11758e-22, 0, 1, 0, 2.11758e-22, 0, 1, -1.97373e-15, 3.257, 0.666667 )
+shape = SubResource( 1 )

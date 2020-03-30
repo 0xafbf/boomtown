@@ -14,9 +14,11 @@ var destroyed = false
 var running = false
 var start_transform: Transform
 func play():
+	$CollisionShape/BombaKawaii.walk(1)
 	running = true
 	start_transform = global_transform
 func reset():
+	$CollisionShape/BombaKawaii.walk(0)
 	running = false
 	destroyed = false
 	global_transform = start_transform
