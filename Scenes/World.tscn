@@ -41,13 +41,13 @@ width = 22.8986
 height = 5.7609
 
 [node name="Arrow" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.974623, 0 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.974623, 0 )
 
 [node name="Arrow2" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 5.98069, 1.39296, 1.22605 )
+transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 5.98069, 0.990095, 0.203583 )
 
 [node name="Arrow3" parent="." instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.98069, 1.39296, 6.98134 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.98069, 1.0906, 6.98134 )
 
 [node name="Destructible" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7641, 2.24738, 4.11619 )
@@ -62,6 +62,34 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.24863, 2.24738, -2.43384 )
 score = 7
 
 [node name="Control" parent="." instance=ExtResource( 4 )]
+
+[node name="Control" parent="Control/Camera" index="0"]
+margin_left = 1.05264
+margin_right = 1.05261
+margin_bottom = 0.0
+
+[node name="TopBar" parent="Control/Camera/Control" index="0"]
+anchor_right = 0.0
+margin_right = 345.0
+margin_bottom = 61.0
+
+[node name="TextScore" parent="Control/Camera/Control/TopBar" index="2"]
+margin_left = 232.296
+margin_top = 11.7041
+margin_right = 339.296
+margin_bottom = 43.7041
+
+[node name="SideBar" parent="Control/Camera/Control" index="1"]
+margin_right = 117.0
+margin_bottom = -355.0
+
+[node name="arrow_right" parent="Control/Camera/Control/SideBar/BtnBomb" index="0"]
+position = Vector2( 27.2136, 20.9834 )
+scale = Vector2( 0.0405778, 0.0405778 )
+
+[node name="arrow_right" parent="Control/Camera/Control/SideBar/BtnDelete" index="0"]
+position = Vector2( 24.5944, 22.7744 )
+scale = Vector2( 0.0398071, 0.0398071 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.537977, -0.543252, 0.644561, 0, 0.76464, 0.644457, -0.84296, -0.346703, 0.411359, 0, 6.00231, 0 )

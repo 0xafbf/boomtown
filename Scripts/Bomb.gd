@@ -1,5 +1,4 @@
 extends KinematicBody
-class_name Bomb
 
 enum {COLOR_BLUE, COLOR_RED}
 
@@ -22,7 +21,10 @@ func reset():
 	destroyed = false
 	global_transform = start_transform
 	last_placed_powder = null
-	
+
+func save():
+	start_transform = global_transform
+
 func _ready():
 	start_transform = global_transform
 	reset()
@@ -63,8 +65,5 @@ func explode():
 	var results = space_state.intersect_shape(query_params)
 	for result in results:
 		var target = result["collider"]
-		print(target)
 		if target is Destructible:
-			
-			print("arst")
 			target.destroy()

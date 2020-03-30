@@ -12,7 +12,6 @@ func reset():
 	queue_free()
 
 func _ready():
-	
 	var space_state = get_world().direct_space_state
 	var query_params = PhysicsShapeQueryParameters.new()
 	query_params.set_shape($CollisionShape.shape)
@@ -31,19 +30,22 @@ func _ready():
 			connected_powder.append(area)
 			if !area.connected_powder.has(self):
 				area.connected_powder.append(self)
-		
+
+
 func _physics_process(delta):
 	if burnt:
 		return
 	if burning:
 		current_burn_time += delta
 		if current_burn_time > burn_time:
+			Global.report_action()
 			for powder in connected_powder:
 				powder.burn()
 			if bomb:
 				bomb.explode()
 			burnt = true
-				
+			Global.burnt = true
+
 func burn():
 	burning = true
 	$CollisionShape/MeshInstance2.visible = true
