@@ -35,13 +35,12 @@ __meta__ = {
 
 [node name="TopBar" type="ColorRect" parent="Camera/Control"]
 anchor_left = -0.002
-anchor_top = 0.779
-anchor_right = 1.0
+anchor_top = 0.778
+anchor_right = 0.619
 anchor_bottom = 1.0
-margin_left = 0.197353
-margin_top = -0.13501
-margin_right = -1.85065
-margin_bottom = -0.735107
+margin_left = 0.0480001
+margin_right = 0.143982
+margin_bottom = -1.0
 color = Color( 0, 0, 0, 0 )
 script = ExtResource( 3 )
 __meta__ = {
@@ -49,26 +48,26 @@ __meta__ = {
 }
 
 [node name="Fondo" type="TextureRect" parent="Camera/Control/TopBar"]
-anchor_right = 0.629
-anchor_bottom = 0.976
-margin_top = -8.0
-margin_right = 428.904
-margin_bottom = 91.1681
+anchor_right = 1.012
+anchor_bottom = 0.923
+margin_right = 429.368
+margin_bottom = 81.3324
 rect_scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 13 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ButtonPlay" type="Button" parent="Camera/Control/TopBar"]
-anchor_left = 0.389
-anchor_top = 0.04
-anchor_right = 0.5
-anchor_bottom = 0.949
-margin_left = -0.33902
-margin_top = -0.0169568
-margin_right = 5.99707
-margin_bottom = -0.00485229
+anchor_left = 0.797
+anchor_top = 0.044
+anchor_right = 0.952
+anchor_bottom = 1.004
+margin_left = 6.108
+margin_top = -0.416807
+margin_right = 6.79303
+margin_bottom = -9.63566
 icon = ExtResource( 11 )
 flat = true
 expand_icon = true
@@ -77,14 +76,14 @@ __meta__ = {
 }
 
 [node name="ButtonStop" type="Button" parent="Camera/Control/TopBar"]
-anchor_left = 0.496
-anchor_top = 0.041
-anchor_right = 0.627
-anchor_bottom = 0.95
-margin_left = 0.407684
-margin_top = 0.0510445
-margin_right = -13.7363
-margin_bottom = 0.0632477
+anchor_left = 0.639
+anchor_top = 0.059
+anchor_right = 0.8
+anchor_bottom = 1.0
+margin_left = 5.19598
+margin_top = -0.599789
+margin_right = 4.44302
+margin_bottom = -10.955
 icon = ExtResource( 10 )
 flat = true
 expand_icon = true
@@ -94,15 +93,19 @@ __meta__ = {
 
 [node name="TextScore" type="RichTextLabel" parent="Camera/Control/TopBar"]
 margin_left = 304.979
-margin_top = 45.1587
+margin_top = 53.1587
 margin_right = 411.979
-margin_bottom = 77.1587
+margin_bottom = 85.1589
 
 [node name="BtnArrow" type="Button" parent="Camera/Control/TopBar"]
-margin_left = 18.4169
-margin_top = 4.25671
-margin_right = 138.417
-margin_bottom = 124.257
+anchor_left = 0.029
+anchor_top = 0.049
+anchor_right = 0.199
+anchor_bottom = 0.949
+margin_left = 0.156
+margin_top = -0.4778
+margin_right = 0.745972
+margin_bottom = -0.495468
 text = "1"
 icon = ExtResource( 5 )
 flat = true
@@ -112,10 +115,14 @@ __meta__ = {
 }
 
 [node name="BtnBomb" type="Button" parent="Camera/Control/TopBar"]
-margin_left = 145.323
-margin_top = 3.39734
-margin_right = 265.323
-margin_bottom = 123.397
+anchor_left = 0.3
+anchor_top = 0.052
+anchor_right = 0.452
+anchor_bottom = 0.955
+margin_left = 2.67737
+margin_top = 4.90554
+margin_right = 2.58136
+margin_bottom = -15.7222
 text = "2"
 icon = ExtResource( 8 )
 flat = true
@@ -125,10 +132,14 @@ __meta__ = {
 }
 
 [node name="BtnDelete" type="Button" parent="Camera/Control/TopBar"]
-margin_left = 263.375
-margin_top = 1.71656
-margin_right = 383.375
-margin_bottom = 121.717
+anchor_left = 0.463
+anchor_top = 0.054
+anchor_right = 0.607
+anchor_bottom = 0.958
+margin_left = 3.73199
+margin_top = -0.538795
+margin_right = 3.22
+margin_bottom = -0.369865
 icon = ExtResource( 12 )
 flat = true
 expand_icon = true
@@ -171,7 +182,6 @@ script = ExtResource( 7 )
 
 [node name="BrushBomb" parent="Brush" instance=ExtResource( 6 )]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0 )
-visible = false
 
 [node name="BrushArrow" parent="Brush" instance=ExtResource( 1 )]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
