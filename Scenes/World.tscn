@@ -41,13 +41,13 @@ width = 22.8986
 height = 5.7609
 
 [node name="Arrow" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.974623, 0 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.974623, 0 )
 
 [node name="Arrow2" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 5.98069, 1.39296, 1.22605 )
+transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 5.98069, 0.990095, 0.203583 )
 
 [node name="Arrow3" parent="." instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.98069, 1.39296, 6.98134 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.98069, 1.0906, 6.98134 )
 
 [node name="Destructible" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7641, 2.24738, 4.11619 )
@@ -66,5 +66,3 @@ score = 7
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.537977, -0.543252, 0.644561, 0, 0.76464, 0.644457, -0.84296, -0.346703, 0.411359, 0, 6.00231, 0 )
 shadow_enabled = true
-
-[editable path="Control"]

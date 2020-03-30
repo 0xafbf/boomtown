@@ -1,6 +1,7 @@
 extends Area
 
-var current_bomb:Bomb = null
+onready var Bomb = load("res://Scripts/Bomb.gd")
+var current_bomb = null
 var current_distance = 0
 
 
@@ -8,6 +9,7 @@ func play():
 	pass
 func reset():
 	current_bomb = null
+	
 
 func _ready():
 	var _key = connect("body_entered", self, "body_entered")

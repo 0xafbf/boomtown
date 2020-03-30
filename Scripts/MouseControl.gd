@@ -1,6 +1,10 @@
 extends Camera
 
-var PanelArrow = preload("res://Scripts/PanelArrow.gd")
+export var max_bombs = 5
+export var max_arrows = 20
+
+onready var PanelArrow = load("res://Scripts/PanelArrow.gd")
+onready var Bomb = load("res://Scripts/Bomb.gd")
 export var brush_path: NodePath
 export var arrow_scene: PackedScene
 export var bomb_scene: PackedScene
@@ -12,6 +16,7 @@ enum PlayMode {MODE_PLACEMENT, MODE_INTERACT}
 
 var current_mode = PlayMode.MODE_PLACEMENT
 var delete_mode = false
+var started = false
 
 var snap_size = Vector3(1,1,1)
 
@@ -21,6 +26,7 @@ func play():
 	current_mode = PlayMode.MODE_INTERACT
 func reset():
 	current_mode = PlayMode.MODE_PLACEMENT
+	started = false
 
 func _unhandled_input(event):
 	if current_mode == PlayMode.MODE_PLACEMENT:
@@ -39,23 +45,43 @@ func _unhandled_input(event):
 				use_brush = false
 			if result:
 				var target = result["collider"]
-				if target is PanelArrow or target is Bomb:
+				var is_bomb = target is Bomb
+				var is_panel = target is PanelArrow
+				if is_bomb or is_panel:
 					use_brush = false
 					if is_click:
 						if delete_mode:
 							target.queue_free()
+							if is_bomb:
+								max_bombs += 1
+							elif is_panel:
+								max_arrows += 1
 						else:
 							target.rotation.y -= TAU * 0.25
-					
+							if is_bomb:
+								target.save()
+				
+				if current_scene == arrow_scene and max_arrows < 1:
+					use_brush = false
+				elif current_scene == bomb_scene and max_bombs < 1:
+					use_brush = false
+				
 				if use_brush:
 					var target_position = result["position"]
 					target_position = target_position.snapped(snap_size)
 					brush.translation = target_position
 				
 					if is_click:
+						
 						var new_scene = current_scene.instance()
-						get_node("/root").add_child(new_scene)
 						new_scene.translation = target_position
+						get_node("/root").add_child(new_scene)
+						
+						if current_scene == arrow_scene:
+							max_arrows -= 1
+						elif current_scene == bomb_scene:
+							max_bombs -= 1
+						
 			brush.visible = use_brush
 			
 	
@@ -71,9 +97,27 @@ func _unhandled_input(event):
 			var result = space_state.intersect_ray(origin, target_point)
 			var target = result["collider"]
 			if target is Powder:
-				target.burn()
-	
+				if not started:
+					started = true
+					target.burn()
 
+export var cam_speed = 10
+
+func _process(delta):
+	var right = Input.get_action_strength("right") - Input.get_action_strength("left")
+	var forward = Input.get_action_strength("forward") - Input.get_action_strength("back")
+	
+	var right_direction = (-global_transform.basis.z).cross(Vector3.UP)
+	var fwd_direction = Vector3.UP.cross(global_transform.basis.x)	
+	
+	var movement = right * right_direction.normalized()
+	movement += forward * fwd_direction.normalized()	
+	translation += delta * cam_speed * movement
+	$Control/TopBar/BtnArrow.text = "%d" % max_arrows
+	$Control/TopBar/BtnBomb.text = "%d" % max_bombs
+	
+	$Control/ScoreScreen.visible = Global.report_now
+	$Control/ScoreScreen/TextScore.text = "%d" % Global.score
 
 func _on_BtnArrow_pressed():
 	brush.set_preview(brush.arrow)
@@ -88,3 +132,5 @@ func _on_BtnBomb_pressed():
 
 func _on_BtnDelete_pressed():
 	delete_mode = true
+	
+
