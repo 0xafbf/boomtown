@@ -28,6 +28,7 @@ _global_script_class_icons={
 
 config/name="gcj2020"
 run/main_scene="res://UI/MainMenu.tscn"
+boot_splash/image="res://UI/MainMenu.png"
 config/icon="res://icon.png"
 
 [autoload]
