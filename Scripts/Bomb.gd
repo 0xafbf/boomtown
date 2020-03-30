@@ -19,6 +19,7 @@ func play():
 	start_transform = global_transform
 func reset():
 	$CollisionShape/BombaKawaii.walk(0)
+	$CollisionShape/BombaKawaii.visible = true
 	running = false
 	destroyed = false
 	global_transform = start_transform
@@ -56,6 +57,7 @@ func explode():
 	if destroyed:
 		return
 	$CollisionShape/Particles.emitting = true
+	$CollisionShape/BombaKawaii.visible = false
 	destroyed = true
 	
 	var space_state = get_world().direct_space_state

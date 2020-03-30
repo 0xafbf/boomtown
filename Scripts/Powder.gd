@@ -49,5 +49,6 @@ func _physics_process(delta):
 
 func burn():
 	burning = true
+	$Particles.emitting = true
 	$CollisionShape/MeshInstance.visible = false
 	$CollisionShape/MeshInstance2.visible = true
