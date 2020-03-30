@@ -24,15 +24,13 @@ bomb_scene = ExtResource( 9 )
 [node name="Control" type="Control" parent="Camera"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -582.0
-margin_bottom = -313.0
 mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TopBar" type="ColorRect" parent="Camera/Control"]
-anchor_right = 1.0
+margin_right = 200.0
 margin_bottom = 60.0
 color = Color( 0.262745, 0.262745, 0.262745, 1 )
 script = ExtResource( 3 )
@@ -67,9 +65,10 @@ margin_right = 335.0
 margin_bottom = 48.0
 
 [node name="SideBar" type="ColorRect" parent="Camera/Control"]
-anchor_bottom = 1.0
-margin_top = 60.0
-margin_right = 145.0
+margin_left = -2.0
+margin_top = 68.0
+margin_right = 143.0
+margin_bottom = 314.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -111,8 +110,8 @@ __meta__ = {
 }
 
 [node name="arrow_right" type="Sprite" parent="Camera/Control/SideBar/BtnBomb"]
-position = Vector2( 31.2566, 20.6159 )
-scale = Vector2( 0.224693, 0.224693 )
+position = Vector2( 21.8291, 23.0601 )
+scale = Vector2( 0.0341789, 0.0341789 )
 texture = ExtResource( 8 )
 
 [node name="TxtBombCount" type="RichTextLabel" parent="Camera/Control/SideBar/BtnBomb"]
@@ -138,8 +137,8 @@ __meta__ = {
 }
 
 [node name="arrow_right" type="Sprite" parent="Camera/Control/SideBar/BtnDelete"]
-position = Vector2( 31.2566, 20.6159 )
-scale = Vector2( 0.224693, 0.224693 )
+position = Vector2( 22.6703, 22.5044 )
+scale = Vector2( 0.0422477, 0.0422477 )
 texture = ExtResource( 8 )
 
 [node name="ScoreScreen" type="ColorRect" parent="Camera/Control"]
