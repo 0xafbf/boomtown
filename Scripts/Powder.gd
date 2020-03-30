@@ -12,6 +12,7 @@ func reset():
 	queue_free()
 
 func _ready():
+	rotation.y = randf() * TAU
 	var space_state = get_world().direct_space_state
 	var query_params = PhysicsShapeQueryParameters.new()
 	query_params.set_shape($CollisionShape.shape)
@@ -48,4 +49,5 @@ func _physics_process(delta):
 
 func burn():
 	burning = true
+	$CollisionShape/MeshInstance.visible = false
 	$CollisionShape/MeshInstance2.visible = true
