@@ -6,25 +6,27 @@
 [ext_resource path="res://Scripts/Destructible.gd" type="Script" id=4]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 17, 7.64843, 15 )
+extents = Vector3( 5, 5.78081, 5.04972 )
 
-[node name="Building_Shop01" type="StaticBody"]
+[node name="Building_Shop01" type="StaticBody" groups=[
+"simulate",
+]]
 transform = Transform( -0.000110173, 6.20627e-05, -0.3, 8.40904e-05, 0.3, 6.20339e-05, 0.3, -8.40692e-05, -0.00011019, 0, 0, 0 )
 script = ExtResource( 4 )
-intact_path = NodePath("CollisionShape/Building_Shop01")
-destroyed_path = NodePath("CollisionShape/Building_Shop02")
+intact_path = NodePath("Building_Shop01")
+destroyed_path = NodePath("Building_Shop02")
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, -2.91038e-11, -5.82077e-11, 1, -1.35003e-11, -8.73115e-11, 1.79128e-11, 1, 0.0021766, 7.76508, 0.00160561 )
+transform = Transform( 1, 2.32831e-10, -1.74623e-10, -5.23869e-10, 0.999999, -1.44546e-10, -9.8953e-10, 1.7728e-11, 0.999999, 0.00217659, 5.84817, 0.863709 )
 shape = SubResource( 1 )
 
-[node name="Building_Shop01" type="MeshInstance" parent="CollisionShape"]
-transform = Transform( 1, 5.82077e-11, -2.91038e-11, -1.74623e-10, 1, -7.17435e-11, -3.20142e-10, 3.24292e-11, 1, -0.00213434, -7.6143, -0.00157443 )
+[node name="Building_Shop01" type="MeshInstance" parent="."]
+transform = Transform( 1, 5.82077e-11, -8.73115e-11, -2.91038e-10, 1, -1.1535e-10, -5.23869e-10, 6.15472e-11, 1, 4.22601e-05, 0.15078, 3.11798e-05 )
 mesh = ExtResource( 3 )
 material/0 = ExtResource( 1 )
 
-[node name="Building_Shop02" type="MeshInstance" parent="CollisionShape"]
-transform = Transform( 1, 5.82077e-11, -2.91038e-11, -1.74623e-10, 1, -7.17435e-11, -3.20142e-10, 3.24292e-11, 1, -0.00213434, -7.6143, -0.00157443 )
+[node name="Building_Shop02" type="MeshInstance" parent="."]
+transform = Transform( 1, 5.82077e-11, -8.73115e-11, -2.91038e-10, 1, -1.1535e-10, -5.23869e-10, 6.15472e-11, 1, 4.22601e-05, 0.15078, 3.11798e-05 )
 visible = false
 mesh = ExtResource( 3 )
 material/0 = ExtResource( 2 )
