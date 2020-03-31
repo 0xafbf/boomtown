@@ -15,5 +15,4 @@ dest_files=[ "res://.import/road_crossing_mesh1.obj-027e8b4747b612050026a52f428b
 
 generate_tangents=true
 scale_mesh=Vector3( 0.3, 0.3, 0.3 )
-offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

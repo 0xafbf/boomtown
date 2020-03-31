@@ -15,5 +15,4 @@ dest_files=[ "res://.import/taxi_seperate_mesh.obj-be986db0eebe0b3840efeb8d6bf3b
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

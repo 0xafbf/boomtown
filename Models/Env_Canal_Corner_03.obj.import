@@ -15,5 +15,4 @@ dest_files=[ "res://.import/Env_Canal_Corner_03.obj-d57806da3fcefce8e2d0bc3b7194
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

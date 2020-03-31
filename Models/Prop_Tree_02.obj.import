@@ -15,5 +15,4 @@ dest_files=[ "res://.import/Prop_Tree_02.obj-66d9a3e88609b49725b1c263b511b29d.me
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

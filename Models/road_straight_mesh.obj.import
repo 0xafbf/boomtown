@@ -15,5 +15,4 @@ dest_files=[ "res://.import/road_straight_mesh.obj-9a6569107051f39e575632948d46c
 
 generate_tangents=false
 scale_mesh=Vector3( 0.3, 0.3, 0.3 )
-offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

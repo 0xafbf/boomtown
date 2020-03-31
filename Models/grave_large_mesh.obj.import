@@ -15,5 +15,4 @@ dest_files=[ "res://.import/grave_large_mesh.obj-ea09c4e025f54a1a71a18725dea16af
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true
