@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Assets/PanelArrow.glb" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Arrow.tscn" type="PackedScene" id=2]
@@ -18,6 +18,8 @@
 [ext_resource path="res://UI/main_font.tres" type="DynamicFont" id=16]
 [ext_resource path="res://UI/ScoreMenu.png" type="Texture" id=17]
 [ext_resource path="res://UI/ArrowWithCamera.png" type="Texture" id=18]
+[ext_resource path="res://Audio/Fluffing_a_Duck.ogg" type="AudioStream" id=19]
+[ext_resource path="res://Audio/Meatball_Parade.ogg" type="AudioStream" id=20]
 
 [node name="Control" type="Spatial"]
 
@@ -231,6 +233,20 @@ margin_bottom = 241.9
 custom_fonts/normal_font = ExtResource( 16 )
 text = "1234"
 
+[node name="Restart" type="Button" parent="Camera/Control/ScoreScreen/Container"]
+margin_left = 336.772
+margin_top = 126.241
+margin_right = 476.772
+margin_bottom = 260.241
+icon = ExtResource( 15 )
+flat = true
+
+[node name="AudioPlanning" type="AudioStreamPlayer" parent="Camera/Control"]
+stream = ExtResource( 19 )
+
+[node name="AudioRunning" type="AudioStreamPlayer" parent="Camera/Control"]
+stream = ExtResource( 20 )
+
 [node name="Brush" type="Spatial" parent="."]
 script = ExtResource( 7 )
 
@@ -243,3 +259,4 @@ transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
 [connection signal="pressed" from="Camera/Control/TopBar/BtnArrow" to="Camera" method="_on_BtnArrow_pressed"]
 [connection signal="pressed" from="Camera/Control/TopBar/BtnBomb" to="Camera" method="_on_BtnBomb_pressed"]
 [connection signal="pressed" from="Camera/Control/TopBar/BtnDelete" to="Camera" method="_on_BtnDelete_pressed"]
+[connection signal="pressed" from="Camera/Control/ScoreScreen/Container/Restart" to="Camera/Control/TopBar" method="_on_Restart_pressed"]

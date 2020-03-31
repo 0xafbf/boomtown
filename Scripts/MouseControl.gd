@@ -131,6 +131,14 @@ func _process(delta):
 	
 	if current_mode == PlayMode.MODE_INTERACT:
 		brush.visible = false
+		if not $Control/AudioRunning.playing:
+			$Control/AudioRunning.playing = true
+		$Control/AudioPlanning.playing = false
+	elif current_mode == PlayMode.MODE_PLACEMENT:
+		if not $Control/AudioPlanning.playing:
+			 $Control/AudioPlanning.playing = true
+		$Control/AudioRunning.playing = false
+	
 
 func _on_BtnArrow_pressed():
 	brush.set_preview(brush.arrow)

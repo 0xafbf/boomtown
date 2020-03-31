@@ -12,3 +12,7 @@ func on_stop():
 
 func _process(_delta):
 	$TextScore.text = "%d" % Global.score
+
+
+func _on_Restart_pressed():
+	Global.restore_all()
