@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Assets/PanelArrow.glb" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Arrow.tscn" type="PackedScene" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://UI/ArrowWithCamera.png" type="Texture" id=18]
 [ext_resource path="res://Audio/Fluffing_a_Duck.ogg" type="AudioStream" id=19]
 [ext_resource path="res://Audio/Meatball_Parade.ogg" type="AudioStream" id=20]
+[ext_resource path="res://UI/fire.png" type="Texture" id=21]
 
 [node name="Control" type="Spatial"]
 
@@ -174,6 +175,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 texture = ExtResource( 15 )
+expand = true
+
+[node name="IconFire" type="TextureRect" parent="Camera/Control/Icons"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture = ExtResource( 21 )
 expand = true
 
 [node name="TextureRect" type="TextureRect" parent="Camera/Control"]

@@ -30,6 +30,8 @@ func reset():
 
 func _unhandled_input(event):
 	if current_mode == PlayMode.MODE_PLACEMENT:
+		$Control/Icons/IconErase.visible = false
+		
 		var mouse_event = event as InputEventMouse
 		var click_event:InputEventMouseButton = event as InputEventMouseButton
 		var is_click = click_event && click_event.button_index == BUTTON_LEFT && !click_event.pressed
@@ -53,6 +55,8 @@ func _unhandled_input(event):
 					$Control/Icons.visible = true
 					$Control/Icons/IconErase.visible = delete_mode
 					$Control/Icons/IconRotate.visible = !delete_mode
+					$Control/Icons/IconFire.visible = false
+					
 					if is_click:
 						if delete_mode:
 							target.queue_free()
@@ -97,9 +101,9 @@ func _unhandled_input(event):
 	elif current_mode == PlayMode.MODE_INTERACT:
 		$Control/Icons.visible = false
 		brush.visible = false
-		var mouse_event = event as InputEventMouseButton
-		if mouse_event and mouse_event.button_index == 1 and mouse_event.is_pressed():
-	
+		var mouse_event = event as InputEventMouse
+		if mouse_event:
+			$Control/Icons.rect_position = mouse_event.position
 			var origin = project_ray_origin(mouse_event.position)
 			var normal = project_ray_normal(mouse_event.position)
 			var target_point = origin + normal * 1000
@@ -107,9 +111,14 @@ func _unhandled_input(event):
 			var result = space_state.intersect_ray(origin, target_point)
 			var target = result["collider"]
 			if target is Powder:
-				if not started:
-					started = true
-					target.burn()
+				$Control/Icons.visible = true
+				$Control/Icons/IconErase.visible = false
+				$Control/Icons/IconRotate.visible = false
+				$Control/Icons/IconFire.visible = true
+				if mouse_event is InputEventMouseButton and mouse_event.button_index == 1 and mouse_event.is_pressed():
+					if not started:
+						started = true
+						target.burn()
 
 export var cam_speed = 10
 

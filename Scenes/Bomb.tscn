@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Bomb.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Powder.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Character/BombaKawaiiScene.tscn" type="PackedScene" id=3]
+[ext_resource path="res://explosion.wav" type="AudioStream" id=4]
 
 [sub_resource type="SphereShape" id=1]
 
@@ -37,6 +38,11 @@ radius = 6.0
 ]]
 script = ExtResource( 1 )
 trail_template = ExtResource( 2 )
+
+[node name="AudioExplosion" type="AudioStreamPlayer3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+stream = ExtResource( 4 )
+unit_size = 12.0
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )

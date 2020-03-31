@@ -56,6 +56,7 @@ func _physics_process(delta):
 func explode():
 	if destroyed:
 		return
+	$AudioExplosion.play()
 	$CollisionShape/Particles.emitting = true
 	$CollisionShape/BombaKawaii.visible = false
 	destroyed = true
