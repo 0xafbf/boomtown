@@ -15,4 +15,5 @@ dest_files=[ "res://.import/Env_Road_Ramp_Pillar.obj-24eed8d0d362718fe21c4dade7a
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

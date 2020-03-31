@@ -15,4 +15,5 @@ dest_files=[ "res://.import/ute_empty_mesh.obj-0eb4589185d5aa56361c394fd5e69640.
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

@@ -15,4 +15,5 @@ dest_files=[ "res://.import/Building_BarberShop.obj-fe194fa96b8b6d394992d9ecd167
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

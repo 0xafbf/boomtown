@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Meatball_Parade.ogg-8c8a8130134fcddcdf834952daeb242a.oggstr"
+
+[deps]
+
+source_file="res://Audio/Meatball_Parade.ogg"
+dest_files=[ "res://.import/Meatball_Parade.ogg-8c8a8130134fcddcdf834952daeb242a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

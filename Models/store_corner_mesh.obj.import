@@ -15,4 +15,5 @@ dest_files=[ "res://.import/store_corner_mesh.obj-c7fa1307706160720b1699d5b64933
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

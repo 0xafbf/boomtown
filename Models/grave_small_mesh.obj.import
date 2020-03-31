@@ -15,4 +15,5 @@ dest_files=[ "res://.import/grave_small_mesh.obj-7f9b6f4dc052671ea54666e4e7c1b2e
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

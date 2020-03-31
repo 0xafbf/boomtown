@@ -15,4 +15,5 @@ dest_files=[ "res://.import/ST_Veh_Van_Green_Z.obj-9a1eb4281350676422d69862ba146
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

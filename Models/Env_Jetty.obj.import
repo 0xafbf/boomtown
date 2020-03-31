@@ -15,4 +15,5 @@ dest_files=[ "res://.import/Env_Jetty.obj-d396a23a3d98cfc9c35930c0fb5ced46.mesh"
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

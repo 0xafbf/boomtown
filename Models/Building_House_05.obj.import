@@ -15,4 +15,5 @@ dest_files=[ "res://.import/Building_House_05.obj-d38d19bdb5242f394a5b41c3eaced9
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true
