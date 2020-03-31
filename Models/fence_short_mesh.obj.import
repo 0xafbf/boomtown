@@ -15,4 +15,5 @@ dest_files=[ "res://.import/fence_short_mesh.obj-2db823907b1fcbe6a5af2ec5cc5ed47
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

@@ -15,4 +15,5 @@ dest_files=[ "res://.import/Prop_Umbrella_03.obj-967a4bd142b8a1269d3fe363a8704af
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

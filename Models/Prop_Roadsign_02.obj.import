@@ -15,4 +15,5 @@ dest_files=[ "res://.import/Prop_Roadsign_02.obj-18ffdb18cf679be370897546e236f6d
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

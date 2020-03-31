@@ -15,4 +15,5 @@ dest_files=[ "res://.import/ST_Veh_Ambo_Z.obj-994ef2751874d277516822492e03251e.m
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

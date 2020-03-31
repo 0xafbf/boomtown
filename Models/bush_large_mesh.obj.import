@@ -15,4 +15,5 @@ dest_files=[ "res://.import/bush_large_mesh.obj-df7e8142e163b8a2f4b0fe4a46f9c920
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

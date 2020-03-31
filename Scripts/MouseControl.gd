@@ -34,6 +34,7 @@ func _unhandled_input(event):
 		var click_event:InputEventMouseButton = event as InputEventMouseButton
 		var is_click = click_event && click_event.button_index == BUTTON_LEFT && !click_event.pressed
 		if mouse_event:
+			$Control/Icons.rect_position = mouse_event.position
 			var origin = project_ray_origin(mouse_event.position)
 			var normal = project_ray_normal(mouse_event.position)
 			var target_point = origin + normal * 1000
@@ -49,6 +50,9 @@ func _unhandled_input(event):
 				var is_panel = target is PanelArrow
 				if is_bomb or is_panel:
 					use_brush = false
+					$Control/Icons.visible = true
+					$Control/Icons/IconErase.visible = delete_mode
+					$Control/Icons/IconRotate.visible = !delete_mode
 					if is_click:
 						if delete_mode:
 							target.queue_free()
@@ -60,7 +64,9 @@ func _unhandled_input(event):
 							target.rotation.y -= TAU * 0.25
 							if is_bomb:
 								target.save()
-				
+				else:
+					$Control/Icons.visible = false
+					
 				if current_scene == arrow_scene and max_arrows < 1:
 					use_brush = false
 				elif current_scene == bomb_scene and max_bombs < 1:
@@ -69,24 +75,27 @@ func _unhandled_input(event):
 				if use_brush:
 					var target_position = result["position"]
 					target_position = target_position.snapped(snap_size)
-					brush.translation = target_position
-				
-					if is_click:
-						
-						var new_scene = current_scene.instance()
-						new_scene.translation = target_position
-						get_node("/root").add_child(new_scene)
-						
-						if current_scene == arrow_scene:
-							max_arrows -= 1
-						elif current_scene == bomb_scene:
-							max_bombs -= 1
+					if target_position.y != 0:
+						use_brush = false
+					else:
+						brush.translation = target_position
+						if is_click:
+							
+							var new_scene = current_scene.instance()
+							new_scene.translation = target_position
+							get_node("/root").add_child(new_scene)
+							
+							if current_scene == arrow_scene:
+								max_arrows -= 1
+							elif current_scene == bomb_scene:
+								max_bombs -= 1
 						
 			brush.visible = use_brush
 			
 	
 	
 	elif current_mode == PlayMode.MODE_INTERACT:
+		$Control/Icons.visible = false
 		brush.visible = false
 		var mouse_event = event as InputEventMouseButton
 		if mouse_event and mouse_event.button_index == 1 and mouse_event.is_pressed():
@@ -114,11 +123,11 @@ func _process(delta):
 	var movement = right * right_direction.normalized()
 	movement += forward * fwd_direction.normalized()	
 	translation += delta * cam_speed * movement
-	$Control/TopBar/BtnArrow.text = "%d" % max_arrows
-	$Control/TopBar/BtnBomb.text = "%d" % max_bombs
+	$Control/TopBar/BtnArrow/Text.text = "%d" % max_arrows
+	$Control/TopBar/BtnBomb/Text.text = "%d" % max_bombs
 	
 	$Control/ScoreScreen.visible = Global.report_now
-	$Control/ScoreScreen/TextScore.text = "%d" % Global.score
+	$Control/ScoreScreen/Container/TextScore.text = "%d" % Global.score
 	
 	if current_mode == PlayMode.MODE_INTERACT:
 		brush.visible = false

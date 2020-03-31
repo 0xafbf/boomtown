@@ -15,4 +15,5 @@ dest_files=[ "res://.import/cop_seperate_mesh.obj-717cb189c1c1d915dd2aa2d00ce5a9
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

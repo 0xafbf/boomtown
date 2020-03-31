@@ -15,4 +15,5 @@ dest_files=[ "res://.import/road_Roundabout.obj-cf47fd16de06613e6983c7d4a8926644
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true
