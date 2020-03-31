@@ -15,5 +15,4 @@ dest_files=[ "res://.import/ST_Veh_Ute_Yellow_Z.obj-b7ac2705cf1cf1ca517ee21e4b0c
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

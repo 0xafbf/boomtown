@@ -1,4 +1,4 @@
-extends ColorRect
+extends Node
 
 func _ready():
 	$ButtonPlay.connect("pressed", self, "on_play")

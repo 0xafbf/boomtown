@@ -15,5 +15,4 @@ dest_files=[ "res://.import/traffic_light_mesh.obj-332c9823379ff0b4a83a032fbfba5
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

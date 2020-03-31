@@ -87,6 +87,7 @@ func _unhandled_input(event):
 	
 	
 	elif current_mode == PlayMode.MODE_INTERACT:
+		brush.visible = false
 		var mouse_event = event as InputEventMouseButton
 		if mouse_event and mouse_event.button_index == 1 and mouse_event.is_pressed():
 	
@@ -118,6 +119,9 @@ func _process(delta):
 	
 	$Control/ScoreScreen.visible = Global.report_now
 	$Control/ScoreScreen/TextScore.text = "%d" % Global.score
+	
+	if current_mode == PlayMode.MODE_INTERACT:
+		brush.visible = false
 
 func _on_BtnArrow_pressed():
 	brush.set_preview(brush.arrow)

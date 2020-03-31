@@ -15,5 +15,4 @@ dest_files=[ "res://.import/Env_Foot_Bridge.obj-94c7faea397d34b338f78a7cfba16b0d
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

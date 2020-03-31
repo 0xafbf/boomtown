@@ -15,5 +15,4 @@ dest_files=[ "res://.import/hedge_mesh.obj-a93fefa95b2cddeed1e7878d1fb217a4.mesh
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

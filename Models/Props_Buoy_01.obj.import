@@ -15,5 +15,4 @@ dest_files=[ "res://.import/Props_Buoy_01.obj-a8cf2d26dfa184af5015137c156e38e9.m
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true

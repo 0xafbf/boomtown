@@ -15,5 +15,4 @@ dest_files=[ "res://.import/Env_Canal_Pipe_01.obj-1fa4ea09e4fd719aed5ec6c4e7fbb1
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
-offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true
