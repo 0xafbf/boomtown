@@ -4,14 +4,14 @@
 [ext_resource path="res://Scenes/Arrow.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/GameUI.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/MouseControl.gd" type="Script" id=4]
-[ext_resource path="res://UI/icon_arrow.png" type="Texture" id=5]
+[ext_resource path="res://UI/Icon_Arrow (2).png" type="Texture" id=5]
 [ext_resource path="res://Character/BombaKawaiiScene.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scripts/Brush.gd" type="Script" id=7]
 [ext_resource path="res://UI/icon_bomb.png" type="Texture" id=8]
 [ext_resource path="res://Scenes/Bomb.tscn" type="PackedScene" id=9]
-[ext_resource path="res://UI/stop-button.png" type="Texture" id=10]
-[ext_resource path="res://UI/play-button.png" type="Texture" id=11]
-[ext_resource path="res://UI/eraserGreen.png" type="Texture" id=12]
+[ext_resource path="res://UI/play-button (2).png" type="Texture" id=10]
+[ext_resource path="res://UI/eraser (1).png" type="Texture" id=11]
+[ext_resource path="res://UI/stop-button (2).png" type="Texture" id=12]
 [ext_resource path="res://UI/Hud_fondobotones.png" type="Texture" id=13]
 [ext_resource path="res://UI/eraser.png" type="Texture" id=14]
 [ext_resource path="res://UI/arrow_rotate.png" type="Texture" id=15]
@@ -44,9 +44,9 @@ __meta__ = {
 [node name="TopBar" type="TextureRect" parent="Camera/Control"]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_top = -182.0
-margin_right = 1111.0
-margin_bottom = 42.0
+margin_top = -128.0
+margin_right = 808.0
+margin_bottom = 7.0
 rect_scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 13 )
 expand = true
@@ -56,11 +56,11 @@ __meta__ = {
 }
 
 [node name="ButtonPlay" type="Button" parent="Camera/Control/TopBar"]
-anchor_left = 0.80781
-anchor_top = 0.132923
-anchor_right = 0.963525
-anchor_bottom = 0.882923
-icon = ExtResource( 11 )
+anchor_left = 0.774859
+anchor_top = -0.138272
+anchor_right = 0.988064
+anchor_bottom = 1.09136
+icon = ExtResource( 10 )
 flat = true
 expand_icon = true
 __meta__ = {
@@ -68,11 +68,11 @@ __meta__ = {
 }
 
 [node name="ButtonStop" type="Button" parent="Camera/Control/TopBar"]
-anchor_left = 0.643385
-anchor_top = 0.115628
-anchor_right = 0.803601
-anchor_bottom = 0.892413
-icon = ExtResource( 10 )
+anchor_left = 0.611172
+anchor_top = -0.138272
+anchor_right = 0.825753
+anchor_bottom = 1.10617
+icon = ExtResource( 12 )
 flat = true
 expand_icon = true
 __meta__ = {
@@ -86,10 +86,10 @@ margin_right = 615.298
 margin_bottom = 120.598
 
 [node name="BtnArrow" type="Button" parent="Camera/Control/TopBar"]
-anchor_left = 0.0216022
-anchor_top = 0.0625
-anchor_right = 0.216022
-anchor_bottom = 0.933036
+anchor_left = -0.0111386
+anchor_top = -0.607407
+anchor_right = 0.252475
+anchor_bottom = 1.04444
 margin_bottom = -1.52588e-05
 icon = ExtResource( 5 )
 flat = true
@@ -116,10 +116,10 @@ __meta__ = {
 }
 
 [node name="BtnBomb" type="Button" parent="Camera/Control/TopBar"]
-anchor_left = 0.248036
-anchor_top = 0.0935795
-anchor_right = 0.423734
-anchor_bottom = 0.905613
+anchor_left = 0.215347
+anchor_top = -0.407407
+anchor_right = 0.459158
+anchor_bottom = 1.01481
 icon = ExtResource( 8 )
 flat = true
 expand_icon = true
@@ -143,11 +143,11 @@ __meta__ = {
 }
 
 [node name="BtnDelete" type="Button" parent="Camera/Control/TopBar"]
-anchor_left = 0.46168
-anchor_top = 0.119531
-anchor_right = 0.629097
-anchor_bottom = 0.860602
-icon = ExtResource( 12 )
+anchor_left = 0.429604
+anchor_top = -0.0493824
+anchor_right = 0.642809
+anchor_bottom = 1.06914
+icon = ExtResource( 11 )
 flat = true
 expand_icon = true
 __meta__ = {
@@ -201,6 +201,7 @@ __meta__ = {
 }
 
 [node name="ScoreScreen" type="ColorRect" parent="Camera/Control"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0.537255 )

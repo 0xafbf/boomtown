@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon_bomb.png-3e60743f1b71cfc59aa68c5dab220e0a.stex"
+path="res://.import/stop-button (2).png-fb4315f2178e1ce5fbf22f906c635de0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/icon_bomb.png"
-dest_files=[ "res://.import/icon_bomb.png-3e60743f1b71cfc59aa68c5dab220e0a.stex" ]
+source_file="res://UI/stop-button (2).png"
+dest_files=[ "res://.import/stop-button (2).png-fb4315f2178e1ce5fbf22f906c635de0.stex" ]
 
 [params]
 
