@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Icon_Bomb.png-c482f9b1057b7dcfa7f47bd31d5ff512.stex"
+path="res://.import/TexturaCarretera.png-19001f6a27b312912a68ea6a27f43106.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/Icon_Bomb.png"
-dest_files=[ "res://.import/Icon_Bomb.png-c482f9b1057b7dcfa7f47bd31d5ff512.stex" ]
+source_file="res://Textures/TexturaCarretera.png"
+dest_files=[ "res://.import/TexturaCarretera.png-19001f6a27b312912a68ea6a27f43106.stex" ]
 
 [params]
 
