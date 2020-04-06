@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Click.ogg-eacb8f527d4a3f61ad66394b570d6c58.oggstr"
+
+[deps]
+
+source_file="res://Audio/SFX/Click.ogg"
+dest_files=[ "res://.import/Click.ogg-eacb8f527d4a3f61ad66394b570d6c58.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
