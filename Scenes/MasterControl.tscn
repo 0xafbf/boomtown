@@ -258,9 +258,11 @@ flat = true
 
 [node name="AudioPlanning" type="AudioStreamPlayer" parent="CameraArm/Camera/Control"]
 stream = ExtResource( 19 )
+volume_db = -12.0
 
 [node name="AudioRunning" type="AudioStreamPlayer" parent="CameraArm/Camera/Control"]
 stream = ExtResource( 20 )
+volume_db = -12.0
 
 [node name="Brush" type="Spatial" parent="."]
 script = ExtResource( 7 )
