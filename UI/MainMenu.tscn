@@ -20,13 +20,13 @@ stretch_mode = 7
 
 [node name="Button" type="Button" parent="TextureRect"]
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.799
 anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -201.0
-margin_top = -200.927
-margin_right = 200.0
-margin_bottom = -58.9266
+anchor_bottom = 0.799
+margin_left = -182.0
+margin_top = -65.4
+margin_right = 187.0
+margin_bottom = 65.6
 icon = ExtResource( 2 )
 flat = true
 expand_icon = true
