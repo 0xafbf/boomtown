@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Carretera2_5x5.obj-8db2421bacbc8a97ca9c76e02c3bb91f.mesh"
+
+[deps]
+
+files=[ "res://.import/Carretera2_5x5.obj-8db2421bacbc8a97ca9c76e02c3bb91f.mesh" ]
+
+source_file="res://CarreterasNatan/Carretera2_5x5.obj"
+dest_files=[ "res://.import/Carretera2_5x5.obj-8db2421bacbc8a97ca9c76e02c3bb91f.mesh", "res://.import/Carretera2_5x5.obj-8db2421bacbc8a97ca9c76e02c3bb91f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

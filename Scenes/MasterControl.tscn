@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Assets/PanelArrow.glb" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Arrow.tscn" type="PackedScene" id=2]
@@ -21,19 +21,24 @@
 [ext_resource path="res://Audio/Fluffing_a_Duck.ogg" type="AudioStream" id=19]
 [ext_resource path="res://Audio/Meatball_Parade.ogg" type="AudioStream" id=20]
 [ext_resource path="res://UI/fire.png" type="Texture" id=21]
+[ext_resource path="res://Scripts/CameraRig.gd" type="Script" id=22]
 
-[node name="Control" type="Spatial"]
+[node name="Node" type="Node"]
 
-[node name="Camera" type="Camera" parent="." groups=[
+[node name="CameraArm" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 0, 0 )
+script = ExtResource( 22 )
+
+[node name="Camera" type="Camera" parent="CameraArm" groups=[
 "simulate",
 ]]
-transform = Transform( 1, 0, 0, 0, 0.513751, 0.857939, 0, -0.857939, 0.513751, 0.790161, 15.4674, 10.6479 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20 )
 script = ExtResource( 4 )
-brush_path = NodePath("../Brush")
+brush_path = NodePath("../../Brush")
 arrow_scene = ExtResource( 2 )
 bomb_scene = ExtResource( 9 )
 
-[node name="Control" type="Control" parent="Camera"]
+[node name="Control" type="Control" parent="CameraArm/Camera"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -41,7 +46,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TopBar" type="TextureRect" parent="Camera/Control"]
+[node name="TopBar" type="TextureRect" parent="CameraArm/Camera/Control"]
 anchor_top = 1.0
 anchor_bottom = 1.0
 margin_top = -128.0
@@ -55,7 +60,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ButtonPlay" type="Button" parent="Camera/Control/TopBar"]
+[node name="ButtonPlay" type="Button" parent="CameraArm/Camera/Control/TopBar"]
 anchor_left = 0.774859
 anchor_top = -0.138272
 anchor_right = 0.988064
@@ -67,7 +72,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="ButtonStop" type="Button" parent="Camera/Control/TopBar"]
+[node name="ButtonStop" type="Button" parent="CameraArm/Camera/Control/TopBar"]
 anchor_left = 0.611172
 anchor_top = -0.138272
 anchor_right = 0.825753
@@ -79,13 +84,13 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="TextScore" type="RichTextLabel" parent="Camera/Control/TopBar"]
+[node name="TextScore" type="RichTextLabel" parent="CameraArm/Camera/Control/TopBar"]
 margin_left = 508.298
 margin_top = 88.5978
 margin_right = 615.298
 margin_bottom = 120.598
 
-[node name="BtnArrow" type="Button" parent="Camera/Control/TopBar"]
+[node name="BtnArrow" type="Button" parent="CameraArm/Camera/Control/TopBar"]
 anchor_left = -0.0111386
 anchor_top = -0.607407
 anchor_right = 0.252475
@@ -98,7 +103,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Text" type="RichTextLabel" parent="Camera/Control/TopBar/BtnArrow"]
+[node name="Text" type="RichTextLabel" parent="CameraArm/Camera/Control/TopBar/BtnArrow"]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -115,7 +120,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BtnBomb" type="Button" parent="Camera/Control/TopBar"]
+[node name="BtnBomb" type="Button" parent="CameraArm/Camera/Control/TopBar"]
 anchor_left = 0.215347
 anchor_top = -0.407407
 anchor_right = 0.459158
@@ -127,7 +132,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Text" type="RichTextLabel" parent="Camera/Control/TopBar/BtnBomb"]
+[node name="Text" type="RichTextLabel" parent="CameraArm/Camera/Control/TopBar/BtnBomb"]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -142,7 +147,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BtnDelete" type="Button" parent="Camera/Control/TopBar"]
+[node name="BtnDelete" type="Button" parent="CameraArm/Camera/Control/TopBar"]
 anchor_left = 0.429604
 anchor_top = -0.0493824
 anchor_right = 0.642809
@@ -154,7 +159,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Icons" type="Control" parent="Camera/Control"]
+[node name="Icons" type="Control" parent="CameraArm/Camera/Control"]
 margin_right = 68.0
 margin_bottom = 68.0
 mouse_filter = 2
@@ -162,7 +167,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="IconErase" type="TextureRect" parent="Camera/Control/Icons"]
+[node name="IconErase" type="TextureRect" parent="CameraArm/Camera/Control/Icons"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -170,14 +175,14 @@ mouse_filter = 2
 texture = ExtResource( 14 )
 expand = true
 
-[node name="IconRotate" type="TextureRect" parent="Camera/Control/Icons"]
+[node name="IconRotate" type="TextureRect" parent="CameraArm/Camera/Control/Icons"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 texture = ExtResource( 15 )
 expand = true
 
-[node name="IconFire" type="TextureRect" parent="Camera/Control/Icons"]
+[node name="IconFire" type="TextureRect" parent="CameraArm/Camera/Control/Icons"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -185,7 +190,7 @@ mouse_filter = 2
 texture = ExtResource( 21 )
 expand = true
 
-[node name="TextureRect" type="TextureRect" parent="Camera/Control"]
+[node name="TextureRect" type="TextureRect" parent="CameraArm/Camera/Control"]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -200,7 +205,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ScoreScreen" type="ColorRect" parent="Camera/Control"]
+[node name="ScoreScreen" type="ColorRect" parent="CameraArm/Camera/Control"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -209,7 +214,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Container" type="TextureRect" parent="Camera/Control/ScoreScreen"]
+[node name="Container" type="TextureRect" parent="CameraArm/Camera/Control/ScoreScreen"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -224,7 +229,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Camera/Control/ScoreScreen/Container"]
+[node name="RichTextLabel" type="RichTextLabel" parent="CameraArm/Camera/Control/ScoreScreen/Container"]
 margin_left = 95.0
 margin_top = 58.0
 margin_right = 447.0
@@ -235,7 +240,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextScore" type="RichTextLabel" parent="Camera/Control/ScoreScreen/Container"]
+[node name="TextScore" type="RichTextLabel" parent="CameraArm/Camera/Control/ScoreScreen/Container"]
 margin_left = 92.85
 margin_top = 146.9
 margin_right = 324.85
@@ -243,7 +248,7 @@ margin_bottom = 241.9
 custom_fonts/normal_font = ExtResource( 16 )
 text = "1234"
 
-[node name="Restart" type="Button" parent="Camera/Control/ScoreScreen/Container"]
+[node name="Restart" type="Button" parent="CameraArm/Camera/Control/ScoreScreen/Container"]
 margin_left = 336.772
 margin_top = 126.241
 margin_right = 476.772
@@ -251,10 +256,10 @@ margin_bottom = 260.241
 icon = ExtResource( 15 )
 flat = true
 
-[node name="AudioPlanning" type="AudioStreamPlayer" parent="Camera/Control"]
+[node name="AudioPlanning" type="AudioStreamPlayer" parent="CameraArm/Camera/Control"]
 stream = ExtResource( 19 )
 
-[node name="AudioRunning" type="AudioStreamPlayer" parent="Camera/Control"]
+[node name="AudioRunning" type="AudioStreamPlayer" parent="CameraArm/Camera/Control"]
 stream = ExtResource( 20 )
 
 [node name="Brush" type="Spatial" parent="."]
@@ -266,7 +271,7 @@ visible = false
 
 [node name="BrushArrow" parent="Brush" instance=ExtResource( 1 )]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
-[connection signal="pressed" from="Camera/Control/TopBar/BtnArrow" to="Camera" method="_on_BtnArrow_pressed"]
-[connection signal="pressed" from="Camera/Control/TopBar/BtnBomb" to="Camera" method="_on_BtnBomb_pressed"]
-[connection signal="pressed" from="Camera/Control/TopBar/BtnDelete" to="Camera" method="_on_BtnDelete_pressed"]
-[connection signal="pressed" from="Camera/Control/ScoreScreen/Container/Restart" to="Camera/Control/TopBar" method="_on_Restart_pressed"]
+[connection signal="pressed" from="CameraArm/Camera/Control/TopBar/BtnArrow" to="CameraArm/Camera" method="_on_BtnArrow_pressed"]
+[connection signal="pressed" from="CameraArm/Camera/Control/TopBar/BtnBomb" to="CameraArm/Camera" method="_on_BtnBomb_pressed"]
+[connection signal="pressed" from="CameraArm/Camera/Control/TopBar/BtnDelete" to="CameraArm/Camera" method="_on_BtnDelete_pressed"]
+[connection signal="pressed" from="CameraArm/Camera/Control/ScoreScreen/Container/Restart" to="CameraArm/Camera/Control/TopBar" method="_on_Restart_pressed"]

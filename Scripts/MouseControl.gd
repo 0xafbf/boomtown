@@ -123,15 +123,7 @@ func _unhandled_input(event):
 export var cam_speed = 10
 
 func _process(delta):
-	var right = Input.get_action_strength("right") - Input.get_action_strength("left")
-	var forward = Input.get_action_strength("forward") - Input.get_action_strength("back")
 	
-	var right_direction = (-global_transform.basis.z).cross(Vector3.UP)
-	var fwd_direction = Vector3.UP.cross(global_transform.basis.x)	
-	
-	var movement = right * right_direction.normalized()
-	movement += forward * fwd_direction.normalized()	
-	translation += delta * cam_speed * movement
 	$Control/TopBar/BtnArrow/Text.text = "%d" % max_arrows
 	$Control/TopBar/BtnBomb/Text.text = "%d" % max_bombs
 	
