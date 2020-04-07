@@ -97,7 +97,6 @@ func _unhandled_input(event):
 			brush.visible = use_brush
 			
 	
-	
 	elif current_mode == PlayMode.MODE_INTERACT:
 		$Control/Icons.visible = false
 		brush.visible = false
@@ -109,16 +108,17 @@ func _unhandled_input(event):
 			var target_point = origin + normal * 1000
 			var space_state = get_world().direct_space_state
 			var result = space_state.intersect_ray(origin, target_point)
-			var target = result["collider"]
-			if target is Powder:
-				$Control/Icons.visible = true
-				$Control/Icons/IconErase.visible = false
-				$Control/Icons/IconRotate.visible = false
-				$Control/Icons/IconFire.visible = true
-				if mouse_event is InputEventMouseButton and mouse_event.button_index == 1 and mouse_event.is_pressed():
-					if not started:
-						started = true
-						target.burn()
+			if result:
+				var target = result["collider"]
+				if target is Powder:
+					$Control/Icons.visible = true
+					$Control/Icons/IconErase.visible = false
+					$Control/Icons/IconRotate.visible = false
+					$Control/Icons/IconFire.visible = true
+					if mouse_event is InputEventMouseButton and mouse_event.button_index == 1 and mouse_event.is_pressed():
+						if not started:
+							started = true
+							target.burn()
 
 export var cam_speed = 10
 
@@ -139,7 +139,6 @@ func _process(delta):
 		if not $Control/AudioPlanning.playing:
 			 $Control/AudioPlanning.playing = true
 		$Control/AudioRunning.playing = false
-	
 
 func _on_BtnArrow_pressed():
 	brush.set_preview(brush.arrow)
@@ -150,7 +149,6 @@ func _on_BtnBomb_pressed():
 	brush.set_preview(brush.bomb)
 	current_scene = bomb_scene
 	delete_mode = false
-
 
 func _on_BtnDelete_pressed():
 	delete_mode = true
