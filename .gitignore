@@ -1,5 +1,9 @@
 
-/build
+/build/*
+!/build/.gdignore
+
+.DS_Store
+
 .import
 *.blend1
 *.png~
