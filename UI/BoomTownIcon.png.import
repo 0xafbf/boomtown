@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Vehicle_Van_b.png-2bdafa89d43dd0e35a268e1cde69f47f.stex"
+path="res://.import/BoomTownIcon.png-1ccc5d8deb0d03797a2dba6e711e98b0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Vehicle_Van_b.png"
-dest_files=[ "res://.import/Vehicle_Van_b.png-2bdafa89d43dd0e35a268e1cde69f47f.stex" ]
+source_file="res://UI/BoomTownIcon.png"
+dest_files=[ "res://.import/BoomTownIcon.png-1ccc5d8deb0d03797a2dba6e711e98b0.stex" ]
 
 [params]
 

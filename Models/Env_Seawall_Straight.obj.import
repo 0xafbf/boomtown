@@ -16,4 +16,5 @@ dest_files=[ "res://.import/Env_Seawall_Straight.obj-0d4548eeb38fec4d733bb3530ff
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
 offset_mesh=Vector3( 0, 0, 0 )
-optimize_mesh=true
+octahedral_compression=true
+optimize_mesh_flags=4286

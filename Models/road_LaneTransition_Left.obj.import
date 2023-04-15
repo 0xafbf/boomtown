@@ -16,4 +16,5 @@ dest_files=[ "res://.import/road_LaneTransition_Left.obj-1251655cf77e36b6dee9f42
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
 offset_mesh=Vector3( 0, 0, 0 )
-optimize_mesh=true
+octahedral_compression=true
+optimize_mesh_flags=4286

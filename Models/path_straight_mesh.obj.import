@@ -16,4 +16,5 @@ dest_files=[ "res://.import/path_straight_mesh.obj-5dbaac4f53b5a2d5811a08198bc19
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
 offset_mesh=Vector3( 0, 0, 0 )
-optimize_mesh=true
+octahedral_compression=true
+optimize_mesh_flags=4286
