@@ -33,9 +33,7 @@ material = SubResource( 5 )
 [sub_resource type="SphereShape" id=7]
 radius = 6.0
 
-[node name="Bomb" type="KinematicBody" groups=[
-"simulate",
-]]
+[node name="Bomb" type="KinematicBody" groups=["simulate"]]
 script = ExtResource( 1 )
 trail_template = ExtResource( 2 )
 

@@ -23,7 +23,7 @@ func _unhandled_input(event):
 			if new_zoom != 0.0:
 				zoom_level += new_zoom
 				zoom_level = clamp(zoom_level, -max_zoom, max_zoom)
-				desired_distance = 20 * pow(zoom_exponent, zoom_level)
+				desired_distance = base_distance * pow(zoom_exponent, zoom_level)
 
 export var cam_blend_speed: float = 10.0
 export var cam_speed: float = 20

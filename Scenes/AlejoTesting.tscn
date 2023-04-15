@@ -11,9 +11,6 @@
 [ext_resource path="res://Prefabs/Destructible/Building_House_09.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/Road_divider_mesh.tscn" type="PackedScene" id=10]
 
-
-
-
 [node name="Spatial" type="Spatial"]
 
 [node name="AlejoTesting" parent="." instance=ExtResource( 1 )]

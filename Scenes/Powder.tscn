@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Powder.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Polvora.glb" type="PackedScene" id=2]
@@ -12,18 +12,11 @@ flags_transparent = true
 flags_unshaded = true
 params_blend_mode = 1
 params_billboard_mode = 1
-albedo_color = Color( 1, 0.584314, 0, 1 )
-
-[sub_resource type="ParticlesMaterial" id=3]
-direction = Vector3( 0, 1, 0 )
-gravity = Vector3( 0, 0, 0 )
-initial_velocity = 17.91
+albedo_color = Color( 10, 5.8, 0, 1 )
 
 [sub_resource type="QuadMesh" id=4]
 
-[node name="TrailPoint" type="StaticBody" groups=[
-"simulate",
-]]
+[node name="TrailPoint" type="StaticBody" groups=["simulate"]]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource( 1 )
@@ -42,14 +35,15 @@ visible = false
 [node name="Cube" parent="CollisionShape/MeshInstance2" index="0"]
 material/0 = ExtResource( 3 )
 
-[node name="Particles" type="Particles" parent="."]
+[node name="Particles" type="CPUParticles" parent="."]
 material_override = SubResource( 2 )
 emitting = false
 lifetime = 0.2
 one_shot = true
 explosiveness = 0.31
-visibility_aabb = AABB( -2.30688, -2.64901, -2.52545, 4.61375, 5.29802, 5.05091 )
-process_material = SubResource( 3 )
-draw_pass_1 = SubResource( 4 )
+mesh = SubResource( 4 )
+direction = Vector3( 0, 1, 0 )
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 17.91
 
 [editable path="CollisionShape/MeshInstance2"]

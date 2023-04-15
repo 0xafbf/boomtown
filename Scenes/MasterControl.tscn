@@ -28,10 +28,9 @@
 [node name="CameraArm" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 0, 0 )
 script = ExtResource( 22 )
+base_distance = 30.0
 
-[node name="Camera" type="Camera" parent="CameraArm" groups=[
-"simulate",
-]]
+[node name="Camera" type="Camera" parent="CameraArm" groups=["simulate"]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20 )
 script = ExtResource( 4 )
 brush_path = NodePath("../../Brush")
@@ -42,9 +41,6 @@ bomb_scene = ExtResource( 9 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TopBar" type="TextureRect" parent="CameraArm/Camera/Control"]
 anchor_top = 1.0
@@ -113,8 +109,8 @@ margin_top = -91.0001
 margin_right = -0.000396729
 margin_bottom = -6.10352e-05
 mouse_filter = 2
-custom_fonts/normal_font = ExtResource( 16 )
 custom_colors/default_color = Color( 1, 0.796078, 0, 1 )
+custom_fonts/normal_font = ExtResource( 16 )
 text = "123"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -140,8 +136,8 @@ anchor_bottom = 1.0
 margin_left = -121.0
 margin_top = -91.0
 mouse_filter = 2
-custom_fonts/normal_font = ExtResource( 16 )
 custom_colors/default_color = Color( 1, 0.815686, 0, 1 )
+custom_fonts/normal_font = ExtResource( 16 )
 text = "123"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -176,6 +172,7 @@ texture = ExtResource( 14 )
 expand = true
 
 [node name="IconRotate" type="TextureRect" parent="CameraArm/Camera/Control/Icons"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -191,6 +188,7 @@ texture = ExtResource( 21 )
 expand = true
 
 [node name="TextureRect" type="TextureRect" parent="CameraArm/Camera/Control"]
+visible = false
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -265,6 +263,7 @@ stream = ExtResource( 20 )
 volume_db = -12.0
 
 [node name="Brush" type="Spatial" parent="."]
+visible = false
 script = ExtResource( 7 )
 
 [node name="BrushBomb" parent="Brush" instance=ExtResource( 6 )]
@@ -273,6 +272,7 @@ visible = false
 
 [node name="BrushArrow" parent="Brush" instance=ExtResource( 1 )]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+
 [connection signal="pressed" from="CameraArm/Camera/Control/TopBar/BtnArrow" to="CameraArm/Camera" method="_on_BtnArrow_pressed"]
 [connection signal="pressed" from="CameraArm/Camera/Control/TopBar/BtnBomb" to="CameraArm/Camera" method="_on_BtnBomb_pressed"]
 [connection signal="pressed" from="CameraArm/Camera/Control/TopBar/BtnDelete" to="CameraArm/Camera" method="_on_BtnDelete_pressed"]

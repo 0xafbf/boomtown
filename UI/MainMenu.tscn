@@ -31,8 +31,5 @@ icon = ExtResource( 2 )
 flat = true
 expand_icon = true
 script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [connection signal="pressed" from="TextureRect/Button" to="TextureRect/Button" method="_on_Button_pressed"]

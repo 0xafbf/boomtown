@@ -65,4 +65,6 @@ left={
 
 [rendering]
 
+quality/filters/msaa=2
+quality/depth/hdr.mobile=true
 environment/default_environment="res://default_env.tres"
